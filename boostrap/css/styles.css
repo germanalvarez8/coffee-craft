@@ -1,19 +1,12 @@
-.jumbotron-background {
-    position: relative;
-    background-image: url('../images/coffe-background-1.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
 .jumbotron {
     height: 100vh;
-    background-color: transparent;
-    color: #fff;
+    background-color: #ddb892;
+    color: #5c3d2e;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: 100%;
     width: auto;
     margin: 0;
     padding: 10rem 10rem;
-    /* padding: 0 0px; */
 }
 
 .section {
