@@ -6,6 +6,7 @@
     <title>Coffee Craft</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <style>
         body {
             background-color: #f8f1e4;
@@ -14,6 +15,19 @@
         }
         .navbar {
             background-color: #6f4e37;
+        }
+        .icons {
+            color: #5c3d2e;
+        }
+        .btn-custom {
+            background-color: #ddb892;
+            color: #f8f1e4;
+            --bs-btn-padding-y: .25rem;
+            --bs-btn-padding-x: .5rem;
+            --bs-btn-font-size: .75rem;
+        }
+        .btn-custom:hover {
+            background-color: #bca77d;
         }
         .navbar-brand, .navbar-nav .nav-link {
             color: #f8f1e4;
@@ -66,21 +80,83 @@
 
     <!-- Jumbotron -->
     <div class="jumbotron text-center">
-        <h1 class="display-4">Welcome to Coffee Craft</h1>
-        <p class="lead">Experience the best coffee in town</p>
+        <h1 class="display-4">Contact us</h1>
     </div>
 
     <!-- Main Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                Contact
+        <div class="col">
+            <div class="row form-row mb-4">
+                <div class="col-md">
+                    <input type="text" class="form-control" placeholder="name" aria-label="name">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control" placeholder="lastname" aria-label="lastname">
+                </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                Contact
+            <div class="mb-4">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
-            <div class="col-lg-4 mb-4">
-                Contact
+            <div class="mb-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-custom">
+                Send
+            </button>
+
+        </div>
+        <hr class="my-5">
+
+        <div class="text-center">
+            <h2>Social media</h2>
+            <div class="m-2 d-none d-lg-block">our social media channels</div>
+        </div>
+
+        <div class="row justify-content-center align-items-center">
+            <div class="social-icons d-flex justify-content-center m-4 p-2">
+                <div class="icons d-flex align-items-center mx-5">
+                    <i class="bi bi-spotify" style="font-size: 2rem;"></i>
+                    <span class="icon-text m-2" style="font-size: 1.2rem;">/coffe_craft</span>
+                </div>
+                <div class="icons d-flex align-items-center mx-5">
+                    <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+                    <span class="icon-text m-2" style="font-size: 1.2rem;">/coffe_craft</span>
+                </div>
+                <div class="icons d-flex align-items-center mx-5">
+                    <i class="bi bi-pinterest" style="font-size: 2rem;"></i>
+                    <span class="icon-text m-2" style="font-size: 1.2rem;">/coffe_craft</span>
+                </div>
+            </div>
+            <div class="social-icons d-flex justify-content-center m-4 p-2">
+                <div class="icons d-flex align-items-center mx-5">
+                    <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+                    <span class="icon-text m-2" style="font-size: 1.2rem;">/coffe_craft</span>
+                </div>
+                <div class="icons d-flex align-items-center mx-5">
+                    <i class="bi bi-youtube" style="font-size: 2rem;"></i>
+                    <span class="icon-text m-2" style="font-size: 1.2rem;">/coffe_craft</span>
+                </div>
+                <div class="icons d-flex align-items-center mx-5">
+                    <i class="bi bi-twitter" style="font-size: 2rem;"></i>
+                    <span class="icon-text m-2" style="font-size: 1.2rem;">/coffe_craft</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="text-center">
+            <h2>Location</h2>
+            <div class="m-2 d-none d-lg-block">Cordoba - Rio cuarto</div>
+        </div>
+
+        <div class="container mt-4 mb-4">
+            <div class="row justify-content-center">
+                <div class=" ">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13366.796469457437!2d-64.37031101284175!3d-33.11699319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2006d08f562e9%3A0x65ee4563d35fba57!2sAtenas%20de%20R%C3%ADo%20Cuarto!5e0!3m2!1ses!2sar!4v1717639159554!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
