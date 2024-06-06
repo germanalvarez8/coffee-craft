@@ -21,10 +21,23 @@
         .navbar-brand:hover, .navbar-nav .nav-link:hover {
             color: #ddb892;
         }
-        .jumbotron {
-            background-color: #ddb892;
-            color: #5c3d2e;
+        .jumbotron-background {
+            position: relative;
+            background-image: url('../images/coffe-background-1.jpeg');
+            background-size: cover;
+            background-position: center;
         }
+        .jumbotron {
+            height: 100vh;
+            background-color: transparent;
+            color: #fff;
+            height: 100%;
+            width: auto;
+            margin: 0;
+            padding: 10rem 10rem;
+            /* padding: 0 0px; */
+        }
+
         .card {
             border: none;
             border-radius: 10px;
@@ -36,6 +49,14 @@
             background-color: #6f4e37;
             color: #f8f1e4;
             padding: 20px 0;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-align: center;
         }
     </style>
 </head>
@@ -50,72 +71,152 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="products.html">Products</a>
+                    <a class="nav-link" href="#products">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="#why-choose-us">Why Choose Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#our-story">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- Jumbotron -->
-    <div class="jumbotron text-center">
+    <div id="home" class="jumbotron text-center jumbotron-background">
         <h1 class="display-4">Welcome to Coffee Craft</h1>
         <p class="lead">Experience the best coffee in town</p>
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Our Special Brew</h5>
-                        <p class="card-text">Discover the unique flavors of our special brew, made from the finest beans.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
+    <!-- Why Choose Us Section -->
+    <div id="why-choose-us" class="section bg-light">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Quality Coffee</h4>
+                    <p>We source the finest coffee beans from around the world to ensure every cup is a delight.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Cozy Ambiance</h4>
+                    <p>Our cafe offers a warm and inviting atmosphere, perfect for relaxing or working.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Friendly Staff</h4>
+                    <p>Our staff is dedicated to providing excellent service and making you feel at home.</p>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Cozy Ambiance</h5>
-                        <p class="card-text">Enjoy your coffee in a warm and inviting atmosphere.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products" class="section">
+        <h2 class="section-title">Our Products</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Our Special Brew</h5>
+                            <p class="card-text">Discover the unique flavors of our special brew, made from the finest beans.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Fresh Pastries</h5>
-                        <p class="card-text">Pair your coffee with our freshly baked pastries.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Cozy Ambiance</h5>
+                            <p class="card-text">Enjoy your coffee in a warm and inviting atmosphere.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Pastries</h5>
+                            <p class="card-text">Pair your coffee with our freshly baked pastries.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="section">
+        <h2 class="section-title">Testimonials</h2>
         <div class="container">
-            <p>&copy; 2024 Coffee Craft. All rights reserved.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"The best coffee shop in town! The atmosphere is cozy and the coffee is simply the best."</p>
+                            <footer class="blockquote-footer">John Doe</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
+                            <footer class="blockquote-footer">Jane Smith</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
+                            <footer class="blockquote-footer">Mary Johnson</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <!-- Our Story Section -->
+    <div id="our-story" class="section bg-light">
+        <h2 class="section-title">Our Story</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Founded in 2024, Coffee Craft started as a small neighborhood coffee shop with a passion for quality coffee and a desire to create a cozy space for coffee lovers. Our commitment to sourcing the finest beans and creating unique blends has earned us a loyal customer base. Join us on our journey and become a part of the Coffee Craft family.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <div id="events" class="section">
+        <h2 class="section-title">Events</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Weekly Coffee Tasting</h4>
+                    <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Live Music

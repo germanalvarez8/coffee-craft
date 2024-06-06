@@ -1,0 +1,12 @@
+.jumbotron-background {
+    position: relative;
+    background-image: url('coffee-craft.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
