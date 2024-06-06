@@ -1,12 +1,57 @@
 .jumbotron-background {
     position: relative;
-    background-image: url('coffee-craft.jpeg');
+    background-image: url('../images/coffe-background-1.jpeg');
     background-size: cover;
     background-position: center;
 }
 
 .jumbotron {
+    height: 100vh;
     background-color: transparent;
-    display: flex;
-    align-items: center;
+    color: #fff;
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 10rem 10rem;
+    /* padding: 0 0px; */
+}
+
+.section {
+    padding: 60px 0;
+}
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+body {
+    background-color: #f8f1e4;
+    color: #5c3d2e;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.navbar {
+    background-color: #6f4e37;
+}
+.navbar-brand, .navbar-nav .nav-link {
+    color: #f8f1e4;
+}
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #ddb892;
+}
+.jumbotron-secondary {
+    background-color: #ddb892;
+    color: #5c3d2e;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+}
+.card-body {
+    background-color: #fff;
+}
+.footer {
+    background-color: #6f4e37;
+    color: #f8f1e4;
+    padding: 20px 0;
 }
