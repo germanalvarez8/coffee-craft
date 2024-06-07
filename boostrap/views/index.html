@@ -23,10 +23,31 @@
             padding: 10rem 10rem;
             border-radius: 0;
         }
+
+        .why-choose-us-item {
+            margin-bottom: 30px;
+        }
+
+        .why-choose-us-item.left {
+            text-align: left;
+        }
+
+        .why-choose-us-item.right {
+            text-align: right;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">Coffee Craft</a>
@@ -62,17 +83,30 @@
         <h2 class="section-title">Why Choose Us</h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h4>Quality Coffee</h4>
-                    <p>We source the finest coffee beans from around the world to ensure every cup is a delight.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Cozy Ambiance</h4>
-                    <p>Our cafe offers a warm and inviting atmosphere, perfect for relaxing or working.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Friendly Staff</h4>
-                    <p>Our staff is dedicated to providing excellent service and making you feel at home.</p>
+                <div class="col-md-12">
+                    <div class="d-flex flex-column align-items-start">
+                        <div class="card why-choose-us-item left">
+                            <div class="card-body">
+                                <h4 class="card-title">High-Quality Beans - The Foundation of a Great Cup</h4>
+                                <p class="card-text">We believe exceptional coffee starts with exceptional beans. That's why we meticulously source our beans from the most renowned coffee-growing regions around the world. We partner with farmers who share our passion for quality and work with them to ensure sustainable practices. Our beans are carefully selected for their unique characteristics, flavor profiles, and freshness. Through meticulous roasting, we unlock the full potential of these beans, creating a coffee experience that is both rich and nuanced.</p>
+                                <button onclick="openModalReadMore()">Read more..</button>
+                            </div>
+                        </div>
+                        <div class="card why-choose-us-item rigth">
+                            <div class="card-body">
+                                <h4 class="card-title">Your Home Away From Home - A Cozy Ambiance for Every Occasion</h4>
+                                <p class="card-text">Our cafe is more than just a place to get a cup of coffee; it's a haven designed to make you feel right at home. We've created a warm and inviting atmosphere that caters to your every need. Whether you're seeking a quiet corner to catch up on work, a comfortable space to relax with friends, or a vibrant atmosphere to socialize, our cafe offers the perfect ambiance. Sink into our plush couches, enveloped by the soft glow of our lamps and the aroma of freshly brewed coffee. Let the stress of the day melt away as you unwind in our cozy haven.</p>
+                                <button onclick="openModalReadMore()">Read more..</button>
+                            </div>
+                        </div>
+                        <div class="card why-choose-us-item left">
+                            <div class="card-body">
+                                <h4 class="card-title">Friendly Staff - Service with a Smile</h4>
+                                <p class="card-text">We understand that exceptional service is just as important as a great cup of coffee. That's why our team is comprised of friendly, passionate coffee enthusiasts who are dedicated to providing you with an unforgettable experience. Our staff is knowledgeable about our coffee offerings and brewing methods, and they are always happy to answer your questions and make recommendations. They are committed to creating a welcoming and friendly environment where you feel valued and appreciated.</p>
+                                <button onclick="openModalReadMore()">Read more..</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,7 +119,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 1">
+                        <img src="../images/brasil-dark.jpg" class="card-img-top" alt="Coffee 1">
                         <div class="card-body">
                             <h5 class="card-title">Our Special Brew</h5>
                             <p class="card-text">Discover the unique flavors of our special brew, made from the finest beans.</p>
@@ -95,7 +129,7 @@
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 2">
+                        <img src="../images/colombia-dragon.jpg" class="card-img-top" alt="Coffee 2">
                         <div class="card-body">
                             <h5 class="card-title">Cozy Ambiance</h5>
                             <p class="card-text">Enjoy your coffee in a warm and inviting atmosphere.</p>
@@ -105,7 +139,7 @@
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Coffee 3">
+                        <img src="../images/bolivia-honey.jpg" class="card-img-top" alt="Coffee 3">
                         <div class="card-body">
                             <h5 class="card-title">Fresh Pastries</h5>
                             <p class="card-text">Pair your coffee with our freshly baked pastries.</p>
@@ -172,4 +206,28 @@
                     <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
                 </div>
                 <div class="col-md-6">
-                    <h4>Live Music
+                    <h4>Live Music</h4>
+                    <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Coffee Craft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function openModalReadMore() {
+            alert('gola');
+        }
+    </script>
+</body>
+</html>
