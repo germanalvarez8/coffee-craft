@@ -48,3 +48,23 @@ body {
     color: #f8f1e4;
     padding: 20px 0;
 }
+
+.social-icons {
+    color: #ddb892;
+}
+
+.icons {
+    color: #5c3d2e;
+}
+
+.btn-custom {
+    background-color: #ddb892;
+    color: #f8f1e4;
+    --bs-btn-padding-y: .25rem;
+    --bs-btn-padding-x: .5rem;
+    --bs-btn-font-size: .75rem;
+}
+
+.btn-custom:hover {
+    background-color: #bca77d;
+}
