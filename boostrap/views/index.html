@@ -45,6 +45,40 @@
         .card:hover {
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
+
+        .tab-content img {
+            max-width: 100%;
+        }
+
+        .tab-pane {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .tab-content img {
+            display: block;
+            margin: 0 auto;
+            max-width: 50%;
+            height: auto;
+            max-height: 50%;
+        }
+
+        .tab-pane h3 {
+            font-weight: bold;
+        }
+
+        .nav-tabs .nav-link.active {
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        .coffe-icon {
+            width: 20px; /* Ajusta el tamaño de la imagen de la estrella */
+            height: 20px;
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body>
@@ -84,26 +118,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="d-flex flex-column align-items-start">
-                        <div class="card why-choose-us-item left">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="card why-choose-us-item col-md-8">
                             <div class="card-body">
                                 <h4 class="card-title">High-Quality Beans - The Foundation of a Great Cup</h4>
-                                <p class="card-text">We believe exceptional coffee starts with exceptional beans. That's why we meticulously source our beans from the most renowned coffee-growing regions around the world. We partner with farmers who share our passion for quality and work with them to ensure sustainable practices. Our beans are carefully selected for their unique characteristics, flavor profiles, and freshness. Through meticulous roasting, we unlock the full potential of these beans, creating a coffee experience that is both rich and nuanced.</p>
-                                <button onclick="openModalReadMore()">Read more..</button>
+                                <p class="card-text">We believe exceptional...</p>
+                                <button onclick="openModalReadMore('high-quality')">Read more</button>
                             </div>
                         </div>
-                        <div class="card why-choose-us-item rigth">
+                        <div class="card why-choose-us-item col-md-8">
                             <div class="card-body">
                                 <h4 class="card-title">Your Home Away From Home - A Cozy Ambiance for Every Occasion</h4>
-                                <p class="card-text">Our cafe is more than just a place to get a cup of coffee; it's a haven designed to make you feel right at home. We've created a warm and inviting atmosphere that caters to your every need. Whether you're seeking a quiet corner to catch up on work, a comfortable space to relax with friends, or a vibrant atmosphere to socialize, our cafe offers the perfect ambiance. Sink into our plush couches, enveloped by the soft glow of our lamps and the aroma of freshly brewed coffee. Let the stress of the day melt away as you unwind in our cozy haven.</p>
-                                <button onclick="openModalReadMore()">Read more..</button>
+                                <p class="card-text">Our cafe is more than just a...</p>
+                                <button onclick="openModalReadMore('home-away')">Read more</button>
                             </div>
                         </div>
-                        <div class="card why-choose-us-item left">
+                        <div class="card why-choose-us-item col-md-8">
                             <div class="card-body">
                                 <h4 class="card-title">Friendly Staff - Service with a Smile</h4>
-                                <p class="card-text">We understand that exceptional service is just as important as a great cup of coffee. That's why our team is comprised of friendly, passionate coffee enthusiasts who are dedicated to providing you with an unforgettable experience. Our staff is knowledgeable about our coffee offerings and brewing methods, and they are always happy to answer your questions and make recommendations. They are committed to creating a welcoming and friendly environment where you feel valued and appreciated.</p>
-                                <button onclick="openModalReadMore()">Read more..</button>
+                                <p class="card-text">We understand that exceptional...</p>
+                                <button onclick="openModalReadMore('friendly-staff')">Read more</button>
                             </div>
                         </div>
                     </div>
@@ -111,6 +145,65 @@
             </div>
         </div>
     </div>
+
+    <div class="container mt-5">
+        <ul class="nav nav-tabs justify-content-around" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="tab-25-stars" data-toggle="tab" href="#content-25-stars" role="tab" aria-controls="content-25-stars" aria-selected="true">
+              25 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-100-stars" data-toggle="tab" href="#content-100-stars" role="tab" aria-controls="content-100-stars" aria-selected="false">
+              100 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-200-stars" data-toggle="tab" href="#content-200-stars" role="tab" aria-controls="content-200-stars" aria-selected="false">
+              200 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-300-stars" data-toggle="tab" href="#content-300-stars" role="tab" aria-controls="content-300-stars" aria-selected="false">
+              300 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-400-stars" data-toggle="tab" href="#content-400-stars" role="tab" aria-controls="content-400-stars" aria-selected="false">
+              400 <span aria-hidden="true" class="text-gold"> <img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+            </a>
+          </li>
+        </ul>
+    
+        <div class="tab-content mt-4 col-lg-12">
+          <div class="tab-pane fade show active" id="content-25-stars" role="tabpanel" aria-labelledby="tab-25-stars">
+            <img src="../images/bag-brazil.jpg" class="card-img-top" alt="25 Stars Reward">
+            <h3>Customize your drink</h3>
+            <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup.</p>
+          </div>
+          <div class="tab-pane fade" id="content-100-stars" role="tabpanel" aria-labelledby="tab-100-stars">
+            <img src="../images/bag-coffe-beans.jpg" class="card-img-top" alt="100 Stars Reward">
+            <h3>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h3>
+            <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more.</p>
+          </div>
+          <div class="tab-pane fade" id="content-200-stars" role="tabpanel" aria-labelledby="tab-200-stars">
+            <img src="../images/bag-coffe-dark.jpg" class="card-img-top" alt="200 Stars Reward">
+            <h3>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h3>
+            <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
+          </div>
+          <div class="tab-pane fade" id="content-300-stars" role="tabpanel" aria-labelledby="tab-300-stars">
+            <img src="../images/bag-colombia-medium.jpg" class="card-img-top" alt="300 Stars Reward">
+            <h3>Sandwich, protein box or at-home coffee</h3>
+            <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
+          </div>
+          <div class="tab-pane fade" id="content-400-stars" role="tabpanel" aria-labelledby="tab-400-stars">
+            <img src="../images/bag-ethiopia.jpg" class="card-img-top" alt="400 Stars Reward">
+            <h3>Select Starbucks® merchandise</h3>
+            <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
+          </div>
+        </div>
+      </div>
+      
 
     <!-- Products Section -->
     <div id="products" class="section">
@@ -213,6 +306,24 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="readMoreModal" tabindex="-1" role="dialog" aria-labelledby="readMoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="readMoreModalLabel">Read More</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="" alt="" class="img-fluid mb-3" id="modalImage">
+              <p id="modalText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
@@ -225,9 +336,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        function openModalReadMore() {
-            alert('gola');
-        }
+        $(document).ready(function() {
+            $('#product-promotions-slider').carousel({
+                interval: 3000
+            });
+        });
+
+        function openModalReadMore(section) {            
+            if (section == 'high-quality') {
+                document.getElementById('modalImage').src = "../images/coffee-craft.jpeg";
+                document.getElementById('modalText').textContent = "We believe exceptional coffee starts with exceptional beans. That's why we meticulously source our beans from the most renowned coffee-growing regions around the world. We partner with farmers who share our passion for quality and work with them to ensure sustainable practices. Our beans are carefully selected for their unique characteristics, flavor profiles, and freshness. Through meticulous roasting, we unlock the full potential of these beans, creating a coffee experience that is both rich and nuanced";
+            }
+
+            if (section == 'home-away') {
+                document.getElementById('modalImage').src = "../images/coffe-background-1.jpeg";
+                document.getElementById('modalText').textContent = "Our cafe is more than just a place to get a cup of coffee; it's a haven designed to make you feel right at home. We've created a warm and inviting atmosphere that caters to your every need. Whether you're seeking a quiet corner to catch up on work, a comfortable space to relax with friends, or a vibrant atmosphere to socialize, our cafe offers the perfect ambiance. Sink into our plush couches, enveloped by the soft glow of our lamps and the aroma of freshly brewed coffee. Let the stress of the day melt away as you unwind in our cozy haven.";
+            }
+
+            if (section == 'friendly-staff') {
+                document.getElementById('modalImage').src = "../images/coffe-background-2.jpeg";
+                document.getElementById('modalText').textContent = "We understand that exceptional service is just as important as a great cup of coffee. That's why our team is comprised of friendly, passionate coffee enthusiasts who are dedicated to providing you with an unforgettable experience. Our staff is knowledgeable about our coffee offerings and brewing methods, and they are always happy to answer your questions and make recommendations. They are committed to creating a welcoming and friendly environment where you feel valued and appreciated.";
+            }
+            
+            $('#readMoreModal').modal('show');
+        } 
     </script>
 </body>
 </html>
