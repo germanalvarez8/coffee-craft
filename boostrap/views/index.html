@@ -9,19 +9,23 @@
     <style>
         .jumbotron-background {
             position: relative;
-            background-image: url('../images/coffe-background-1.jpeg');
             background-size: cover;
+            background-color: #ddb892;
             background-position: center;
         }
+
         .jumbotron {
             height: 100vh;
-            background-color: transparent;
             color: #fff;
             height: 100%;
             width: auto;
             margin: 0;
-            padding: 10rem 10rem;
+            padding: 2rem 2rem;
             border-radius: 0;
+        }
+
+        .why-choose-us {
+            background-color: #ddb892 !important;
         }
 
         .why-choose-us-item {
@@ -75,9 +79,46 @@
         }
 
         .coffe-icon {
-            width: 20px; /* Ajusta el tamaño de la imagen de la estrella */
+            width: 20px;
             height: 20px;
             margin-left: 5px;
+        }
+
+        .imagen-circular {
+            width: 350px;
+            height: 350px;
+            background: url('../images/coffe-background-1.jpeg') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .imagen-circular img {
+            width: 80%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .fade-in.delay-1 {
+            animation-delay: 0.5s;
+        }
+
+        .fade-in.delay-2 {
+            animation-delay: 1s;
+        }
+
+        .section {
+            background-color: #ddb892;
         }
     </style>
 </head>
@@ -108,8 +149,9 @@
 
     <!-- Jumbotron -->
     <div id="home" class="jumbotron text-center jumbotron-background">
-        <h1 class="display-4">Welcome to Coffee Craft</h1>
-        <p class="lead">Experience the best coffee in town</p>
+        <div class="imagen-circular fade-in"></div>
+        <h1 class="display-4 fade-in delay-1">Welcome to Coffee Craft</h1>
+        <p class="lead fade-in delay-2">Experience the best coffee in town</p>
     </div>
 
     <!-- Why Choose Us Section -->
@@ -150,27 +192,27 @@
         <ul class="nav nav-tabs justify-content-around" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" id="tab-25-stars" data-toggle="tab" href="#content-25-stars" role="tab" aria-controls="content-25-stars" aria-selected="true">
-              25 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+              25 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="tab-100-stars" data-toggle="tab" href="#content-100-stars" role="tab" aria-controls="content-100-stars" aria-selected="false">
-              100 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+              100 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="tab-200-stars" data-toggle="tab" href="#content-200-stars" role="tab" aria-controls="content-200-stars" aria-selected="false">
-              200 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+              200 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="tab-300-stars" data-toggle="tab" href="#content-300-stars" role="tab" aria-controls="content-300-stars" aria-selected="false">
-              300 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+              300 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="tab-400-stars" data-toggle="tab" href="#content-400-stars" role="tab" aria-controls="content-400-stars" aria-selected="false">
-              400 <span aria-hidden="true" class="text-gold"> <img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
+              400 <span aria-hidden="true" class="text-gold"> <img src="../images/coffee_icon.png" class="coffe-icon"></span>
             </a>
           </li>
         </ul>
