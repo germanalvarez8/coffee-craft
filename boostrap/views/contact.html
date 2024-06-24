@@ -29,6 +29,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
+                <li id="optionLogin" class="nav-item">
+                    <a id="login" class="nav-link" href="login.html">Log in</a>
+                    <a id="logout" class="nav-link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -125,6 +129,15 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem('logged') === 'true') {
+                console.log("entra");
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('logout').style.display = 'block';
+            }
+        });
+    </script>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
