@@ -6,80 +6,8 @@
     <title>Coffee Craft</title>
     <link rel="stylesheet" href="/boostrap/css/styles.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .jumbotron-background {
-            position: relative;
-            background-image: url('../images/coffe-background-1.jpeg');
-            background-size: cover;
-            background-position: center;
-        }
-        .jumbotron {
-            height: 100vh;
-            background-color: transparent;
-            color: #fff;
-            height: 100%;
-            width: auto;
-            margin: 0;
-            padding: 10rem 10rem;
-            border-radius: 0;
-        }
-
-        .why-choose-us-item {
-            margin-bottom: 30px;
-        }
-
-        .why-choose-us-item.left {
-            text-align: left;
-        }
-
-        .why-choose-us-item.right {
-            text-align: right;
-        }
-
-        .card {
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .tab-content img {
-            max-width: 100%;
-        }
-
-        .tab-pane {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .tab-content img {
-            display: block;
-            margin: 0 auto;
-            max-width: 50%;
-            height: auto;
-            max-height: 50%;
-        }
-
-        .tab-pane h3 {
-            font-weight: bold;
-        }
-
-        .nav-tabs .nav-link.active {
-            font-weight: bold;
-            color: #d4af37;
-        }
-
-        .coffe-icon {
-            width: 20px; /* Ajusta el tamaño de la imagen de la estrella */
-            height: 20px;
-            margin-left: 5px;
-        }
-    </style>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
@@ -108,204 +36,277 @@
 
     <!-- Jumbotron -->
     <div id="home" class="jumbotron text-center jumbotron-background">
-        <h1 class="display-4">Welcome to Coffee Craft</h1>
-        <p class="lead">Experience the best coffee in town</p>
+        <div class="imagen-circular fade-in"></div>
+        <h1 class="display-4 fade-in delay-1">Welcome to Coffee Craft</h1>
+        <p class="lead fade-in delay-2">Experience the best coffee in town</p>
     </div>
 
-    <!-- Why Choose Us Section -->
-    <div id="why-choose-us" class="section bg-light">
-        <h2 class="section-title">Why Choose Us</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class="card why-choose-us-item col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">High-Quality Beans - The Foundation of a Great Cup</h4>
-                                <p class="card-text">We believe exceptional...</p>
-                                <button onclick="openModalReadMore('high-quality')">Read more</button>
-                            </div>
-                        </div>
-                        <div class="card why-choose-us-item col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">Your Home Away From Home - A Cozy Ambiance for Every Occasion</h4>
-                                <p class="card-text">Our cafe is more than just a...</p>
-                                <button onclick="openModalReadMore('home-away')">Read more</button>
-                            </div>
-                        </div>
-                        <div class="card why-choose-us-item col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">Friendly Staff - Service with a Smile</h4>
-                                <p class="card-text">We understand that exceptional...</p>
-                                <button onclick="openModalReadMore('friendly-staff')">Read more</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5">
-        <ul class="nav nav-tabs justify-content-around" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="tab-25-stars" data-toggle="tab" href="#content-25-stars" role="tab" aria-controls="content-25-stars" aria-selected="true">
-              25 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="tab-100-stars" data-toggle="tab" href="#content-100-stars" role="tab" aria-controls="content-100-stars" aria-selected="false">
-              100 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="tab-200-stars" data-toggle="tab" href="#content-200-stars" role="tab" aria-controls="content-200-stars" aria-selected="false">
-              200 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="tab-300-stars" data-toggle="tab" href="#content-300-stars" role="tab" aria-controls="content-300-stars" aria-selected="false">
-              300 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="tab-400-stars" data-toggle="tab" href="#content-400-stars" role="tab" aria-controls="content-400-stars" aria-selected="false">
-              400 <span aria-hidden="true" class="text-gold"> <img src="../images/coffee_icon.png" class="coffe-icon"></span> <span class="sr-only">Stars</span>
-            </a>
-          </li>
-        </ul>
+    <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
     
-        <div class="tab-content mt-4 col-lg-12">
-          <div class="tab-pane fade show active" id="content-25-stars" role="tabpanel" aria-labelledby="tab-25-stars">
-            <img src="../images/bag-brazil.jpg" class="card-img-top" alt="25 Stars Reward">
-            <h3>Customize your drink</h3>
-            <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup.</p>
+            <h2>Heading</h2>
+            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
           </div>
-          <div class="tab-pane fade" id="content-100-stars" role="tabpanel" aria-labelledby="tab-100-stars">
-            <img src="../images/bag-coffe-beans.jpg" class="card-img-top" alt="100 Stars Reward">
-            <h3>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h3>
-            <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more.</p>
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+    
+            <h2>Heading</h2>
+            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
           </div>
-          <div class="tab-pane fade" id="content-200-stars" role="tabpanel" aria-labelledby="tab-200-stars">
-            <img src="../images/bag-coffe-dark.jpg" class="card-img-top" alt="200 Stars Reward">
-            <h3>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h3>
-            <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
-          </div>
-          <div class="tab-pane fade" id="content-300-stars" role="tabpanel" aria-labelledby="tab-300-stars">
-            <img src="../images/bag-colombia-medium.jpg" class="card-img-top" alt="300 Stars Reward">
-            <h3>Sandwich, protein box or at-home coffee</h3>
-            <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
-          </div>
-          <div class="tab-pane fade" id="content-400-stars" role="tabpanel" aria-labelledby="tab-400-stars">
-            <img src="../images/bag-ethiopia.jpg" class="card-img-top" alt="400 Stars Reward">
-            <h3>Select Starbucks® merchandise</h3>
-            <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+    
+            <h2>Heading</h2>
+            <p>And lastly this, the third column of representative placeholder content.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
           </div>
         </div>
-      </div>
-      
+    
+    
+        <!-- START THE FEATURETTES -->
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+    
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+    
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+    
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <!-- /END THE FEATURETTES -->
+    
+    </div><!-- /.container -->
 
-    <!-- Products Section -->
-    <div id="products" class="section">
-        <h2 class="section-title">Our Products</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <img src="../images/brasil-dark.jpg" class="card-img-top" alt="Coffee 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Our Special Brew</h5>
-                            <p class="card-text">Discover the unique flavors of our special brew, made from the finest beans.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <img src="../images/colombia-dragon.jpg" class="card-img-top" alt="Coffee 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Cozy Ambiance</h5>
-                            <p class="card-text">Enjoy your coffee in a warm and inviting atmosphere.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        <img src="../images/bolivia-honey.jpg" class="card-img-top" alt="Coffee 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Fresh Pastries</h5>
-                            <p class="card-text">Pair your coffee with our freshly baked pastries.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+        <!-- Why Choose Us Section -->
+        <div id="why-choose-us" class="section bg-light">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="card why-choose-us-item col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title">High-Quality Beans - The Foundation of a Great Cup</h4>
+                                    <p class="card-text">We believe exceptional...</p>
+                                    <button onclick="openModalReadMore('high-quality')">Read more</button>
+                                </div>
+                            </div>
+                            <div class="card why-choose-us-item col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title">Your Home Away From Home - A Cozy Ambiance for Every Occasion</h4>
+                                    <p class="card-text">Our cafe is more than just a...</p>
+                                    <button onclick="openModalReadMore('home-away')">Read more</button>
+                                </div>
+                            </div>
+                            <div class="card why-choose-us-item col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title">Friendly Staff - Service with a Smile</h4>
+                                    <p class="card-text">We understand that exceptional...</p>
+                                    <button onclick="openModalReadMore('friendly-staff')">Read more</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="section">
-        <h2 class="section-title">Testimonials</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>"The best coffee shop in town! The atmosphere is cozy and the coffee is simply the best."</p>
-                            <footer class="blockquote-footer">John Doe</footer>
+    
+        <div class="container mt-5">
+            <ul class="nav nav-tabs justify-content-around" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="tab-25-stars" data-toggle="tab" href="#content-25-stars" role="tab" aria-controls="content-25-stars" aria-selected="true">
+                  25 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab-100-stars" data-toggle="tab" href="#content-100-stars" role="tab" aria-controls="content-100-stars" aria-selected="false">
+                  100 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab-200-stars" data-toggle="tab" href="#content-200-stars" role="tab" aria-controls="content-200-stars" aria-selected="false">
+                  200 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab-300-stars" data-toggle="tab" href="#content-300-stars" role="tab" aria-controls="content-300-stars" aria-selected="false">
+                  300 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab-400-stars" data-toggle="tab" href="#content-400-stars" role="tab" aria-controls="content-400-stars" aria-selected="false">
+                  400 <span aria-hidden="true" class="text-gold"> <img src="../images/coffee_icon.png" class="coffe-icon"></span>
+                </a>
+              </li>
+            </ul>
+        
+            <div class="tab-content mt-4 col-lg-12">
+              <div class="tab-pane fade show active" id="content-25-stars" role="tabpanel" aria-labelledby="tab-25-stars">
+                <img src="../images/bag-brazil.jpg" class="card-img-top" alt="25 Stars Reward">
+                <h3>Customize your drink</h3>
+                <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup.</p>
+              </div>
+              <div class="tab-pane fade" id="content-100-stars" role="tabpanel" aria-labelledby="tab-100-stars">
+                <img src="../images/bag-coffe-beans.jpg" class="card-img-top" alt="100 Stars Reward">
+                <h3>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h3>
+                <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more.</p>
+              </div>
+              <div class="tab-pane fade" id="content-200-stars" role="tabpanel" aria-labelledby="tab-200-stars">
+                <img src="../images/bag-coffe-dark.jpg" class="card-img-top" alt="200 Stars Reward">
+                <h3>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h3>
+                <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
+              </div>
+              <div class="tab-pane fade" id="content-300-stars" role="tabpanel" aria-labelledby="tab-300-stars">
+                <img src="../images/bag-colombia-medium.jpg" class="card-img-top" alt="300 Stars Reward">
+                <h3>Sandwich, protein box or at-home coffee</h3>
+                <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
+              </div>
+              <div class="tab-pane fade" id="content-400-stars" role="tabpanel" aria-labelledby="tab-400-stars">
+                <img src="../images/bag-ethiopia.jpg" class="card-img-top" alt="400 Stars Reward">
+                <h3>Select Starbucks® merchandise</h3>
+                <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
+              </div>
+            </div>
+          </div>
+          
+    
+        <!-- Products Section -->
+        <div id="products" class="section">
+            <h2 class="section-title">Our Products</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                            <img src="../images/brasil-dark.jpg" class="card-img-top" alt="Coffee 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Our Special Brew</h5>
+                                <p class="card-text">Discover the unique flavors of our special brew, made from the finest beans.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
-                            <footer class="blockquote-footer">Jane Smith</footer>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                            <img src="../images/colombia-dragon.jpg" class="card-img-top" alt="Coffee 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Cozy Ambiance</h5>
+                                <p class="card-text">Enjoy your coffee in a warm and inviting atmosphere.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
-                            <footer class="blockquote-footer">Mary Johnson</footer>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                            <img src="../images/bolivia-honey.jpg" class="card-img-top" alt="Coffee 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Fresh Pastries</h5>
+                                <p class="card-text">Pair your coffee with our freshly baked pastries.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Our Story Section -->
-    <div id="our-story" class="section bg-light">
-        <h2 class="section-title">Our Story</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Founded in 2024, Coffee Craft started as a small neighborhood coffee shop with a passion for quality coffee and a desire to create a cozy space for coffee lovers. Our commitment to sourcing the finest beans and creating unique blends has earned us a loyal customer base. Join us on our journey and become a part of the Coffee Craft family.</p>
+    
+        <!-- Testimonials Section -->
+        <div id="testimonials" class="section">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>"The best coffee shop in town! The atmosphere is cozy and the coffee is simply the best."</p>
+                                <footer class="blockquote-footer">John Doe</footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
+                                <footer class="blockquote-footer">Jane Smith</footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
+                                <footer class="blockquote-footer">Mary Johnson</footer>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Events Section -->
-    <div id="events" class="section">
-        <h2 class="section-title">Events</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Weekly Coffee Tasting</h4>
-                    <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
-                </div>
-                <div class="col-md-6">
-                    <h4>Live Music</h4>
-                    <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
+    
+        <!-- Our Story Section -->
+        <div id="our-story" class="section bg-light">
+            <h2 class="section-title">Our Story</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Founded in 2024, Coffee Craft started as a small neighborhood coffee shop with a passion for quality coffee and a desire to create a cozy space for coffee lovers. Our commitment to sourcing the finest beans and creating unique blends has earned us a loyal customer base. Join us on our journey and become a part of the Coffee Craft family.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    
+        <!-- Events Section -->
+        <div id="events" class="section">
+            <h2 class="section-title">Events</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Weekly Coffee Tasting</h4>
+                        <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Live Music</h4>
+                        <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- Modal -->
     <div class="modal fade" id="readMoreModal" tabindex="-1" role="dialog" aria-labelledby="readMoreModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
