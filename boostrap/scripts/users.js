@@ -46,3 +46,10 @@ function logout() {
     localStorage.setItem('logged', 'false');
     window.location.href = 'login.html';
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (localStorage.getItem('logged') === 'true') {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('logout').style.display = 'block';
+    }
+});
