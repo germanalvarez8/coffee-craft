@@ -17,7 +17,7 @@ let users = [
 ];
 
 function validEmail(email) {
-    return email != '' && email.length > 4; //ajustar
+    return email != '' && email.includes('@') ;
 }
 
 function validPassword(password) {
@@ -44,5 +44,5 @@ function login() {
 
 function logout() {
     localStorage.setItem('logged', 'false');
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
 }
