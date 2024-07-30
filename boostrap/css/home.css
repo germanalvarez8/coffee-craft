@@ -174,3 +174,27 @@
     margin-top: 7rem;
   }
 }
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+  margin: 1%;
+}
+
+.cart-icon button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ddb892;
+  color: black;
+  border-radius: 25%;
+  padding: 3px 6px;
+  font-size: 10px;
+}
