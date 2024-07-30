@@ -1,0 +1,92 @@
+body {
+    background-color: #ddb892;
+    color: #5c3d2e;
+    font-family: 'Playfair Display', serif;
+}
+
+.mdl-layout__header {
+    background-color: #6f4e37;
+}
+
+.mdl-navigation__link, .mdl-layout-title {
+    color: #f8f1e4;
+}
+
+.mdl-navigation__link:hover, .mdl-layout-title:hover {
+    color: #ddb892;
+}
+
+.mdl-grid.mdl-grid--no-spacing {
+    padding: 10rem 10rem;
+    height: 100vh;
+    background-color: #ddb892;
+    color: #5c3d2e;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.mdl-card {
+    border: none;
+    border-radius: 10px;
+}
+
+.mdl-card__supporting-text {
+    background-color: #fff;
+}
+
+.mdl-mini-footer {
+    background-color: #6f4e37;
+    color: #f8f1e4;
+    padding: 20px 0;
+}
+
+.social-icons {
+    color: #ddb892;
+}
+
+.icons {
+    color: #5c3d2e;
+}
+
+.mdl-button.btn-custom {
+    background-color: #6f4e37;
+    color: #f8f1e4;
+    padding: .25rem .5rem;
+    font-size: .75rem;
+}
+
+.mdl-button.btn-custom:hover {
+    background-color: #bca77d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.fade-in.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 1s;
+}
