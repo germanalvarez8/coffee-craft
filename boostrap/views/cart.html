@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/boostrap/css/styles.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .container {
             max-width: 960px;
@@ -34,6 +37,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <div class="cart-icon">
+                        <a class="nav-link fas fa-shopping-cart" href="cart.html"></a>
+                      <span id="cart-count" class="cart-count badge badge-info"></span>
+                    </div>
+                </li>
+                <li id="optionLogin" class="nav-item">
+                    <a id="login" class="nav-link" href="login.html">Log in</a>
+                    <a id="logout" class="nav-link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -43,8 +56,8 @@
             <div class="row g-5">
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-primary">Your cart</span>
-                        <span class="badge bg-primary rounded-pill" id="cart-count">0</span>
+                        <!-- <span class="text-primary">Your cart</span> -->
+                        <!-- <span class="badge bg-primary rounded-pill" id="cart-count">0</span> -->
                     </h4>
                     <ul class="list-group mb-3" id="cart-items">
                     </ul>
@@ -73,36 +86,16 @@
                             <div class="col-sm-6">
                                 <label for="firstName" class="form-label">First name</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                <div class="invalid-feedback">
-                                    Valid first name is required.
-                                </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <label for="lastName" class="form-label">Last name</label>
                                 <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                                <div class="invalid-feedback">
-                                    Valid last name is required.
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="username" class="form-label">Username</label>
-                                <div class="input-group has-validation">
-                                    <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                                <div class="invalid-feedback">
-                                    Your username is required.
-                                </div>
-                                </div>
                             </div>
 
                             <div class="col-12">
                                 <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
                                 <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
-                                </div>
                             </div>
 
                             <div class="col-12">
@@ -124,9 +117,6 @@
                                     <option value="">Choose...</option>
                                     <option>United States</option>
                                 </select>
-                                <div class="invalid-feedback">
-                                    Please select a valid country.
-                                </div>
                             </div>
 
                             <div class="col-md-4">
@@ -135,17 +125,11 @@
                                     <option value="">Choose...</option>
                                     <option>California</option>
                                 </select>
-                                <div class="invalid-feedback">
-                                    Please provide a valid state.
-                                </div>
                             </div>
 
                             <div class="col-md-3">
                                 <label for="zip" class="form-label">Zip</label>
                                 <input type="text" class="form-control" id="zip" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Zip code required.
-                                </div>
                             </div>
                         </div>
 
@@ -201,17 +185,11 @@
                             <div class="col-md-3">
                                 <label for="cc-expiration" class="form-label">Expiration</label>
                                 <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Expiration date required
-                                </div>
                             </div>
 
                             <div class="col-md-3">
                                 <label for="cc-cvv" class="form-label">CVV</label>
                                 <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Security code required
-                                </div>
                             </div>
                         </div>
 
@@ -222,15 +200,6 @@
                 </div>
             </div>
         </main>
-
-        <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; 2024 Coffee Craft. All rights reserved.</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-        </footer>
     </div>
     <!-- Footer -->
     <footer class="footer text-center">
