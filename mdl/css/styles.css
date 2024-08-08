@@ -5,7 +5,8 @@ body {
 }
 
 .mdl-layout__header {
-    background-color: #6f4e37;
+    background-color: #6f4e37 !important;
+    font-family: 'Playfair Display', serif;
 }
 
 .mdl-navigation__link, .mdl-layout-title {
@@ -63,6 +64,19 @@ body {
     font-size: .75rem;
 }
 
+.mdl-button-custom {
+    background-color: #6f4e37;
+    color: #f8f1e4;
+    padding: 2%;
+    font-size: 100%;
+    border-radius: 3px;
+}
+
+.mdl-button-custom:hover {
+    background-color: #bca77d;
+    border-radius: 8px;
+}
+
 .mdl-button.btn-custom:hover {
     background-color: #bca77d;
 }
@@ -89,4 +103,70 @@ body {
 
 .fade-in.delay-2 {
     animation-delay: 1s;
+}
+
+
+.footer {
+    font-family: 'Playfair Display', serif;
+    background-color: #6f4e37;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Playfair Display', serif;
+}
+
+.tittle-login {
+    font-family: 'Playfair Display', serif;
+    margin-top: 20%;
+    margin-bottom: 8%;
+    text-align: center;
+}
+
+.container-button {
+    margin-top: 2%;
+    justify-content: center;
+    display: flex;
+    margin-right: 38%;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.custom-white-input .mdl-textfield__input {
+    background-color: white;
+}
+
+.input-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.tittle-header {
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
