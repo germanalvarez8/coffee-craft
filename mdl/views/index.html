@@ -4,363 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Craft</title>
-    <link rel="stylesheet" href="/boostrap/css/styles.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/home.css" rel="stylesheet">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Coffee Craft</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="products.html">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Jumbotron -->
-    <div id="home" class="jumbotron text-center jumbotron-background">
-        <div class="imagen-circular fade-in"></div>
-        <h1 class="display-4 fade-in delay-1">Welcome to Coffee Craft</h1>
-        <p class="lead fade-in delay-2">Experience the best coffee in town</p>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Coffee Craft</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="index.html">Home</a>
+                    <a class="mdl-navigation__link" href="products.html">Products</a>
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                    <a class="mdl-navigation__link" href="cart.html">Cart</a>
+                    <a id="login" class="mdl-navigation__link" href="login.html">Log in</a>
+                    <a id="logout" class="mdl-navigation__link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
+                </nav>
+            </div>
+        </header>
     </div>
 
-    <div class="container marketing">
-        <div class="row">
-          <div class="col-lg-4">
+    <!-- Jumbotron -->
+    <div class="mdl-grid mdl-grid--no-spacing">
+        <div id="home" class="mdl-cell mdl-cell--12-col mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="imagen-circular fade-in mdl-cell mdl-cell--12-col"></div>
+            <h1 class="display-4 fade-in delay-1 mdl-cell mdl-cell--12-col mdl-typography--text-center">Welcome to Coffee Craft</h1>
+            <p class="lead fade-in delay-2 mdl-cell mdl-cell--12-col mdl-typography--text-center">Experience the best coffee in town</p>
+        </div>
+    </div>
+
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
             <h2>Heading</h2>
             <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
+            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
             <h2>Heading</h2>
             <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
+            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
             <h2>Heading</h2>
             <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
+            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
         </div>
-    
-    
-        <!-- START THE FEATURETTES -->
-    
-        <hr class="featurette-divider">
-    
-        <div class="row featurette">
-          <div class="col-md-7">
+    </div>
+
+    <!-- Featurettes -->
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--7-col">
             <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
             <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
         </div>
-    
-        <hr class="featurette-divider">
-    
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
+        <div class="mdl-cell mdl-cell--5-col">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        </div>
+    </div>
+
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--7-col mdl-cell--order-2">
             <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
             <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
         </div>
-    
-        <hr class="featurette-divider">
-    
-        <div class="row featurette">
-          <div class="col-md-7">
+        <div class="mdl-cell mdl-cell--5-col mdl-cell--order-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        </div>
+    </div>
+
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--7-col">
             <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
             <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-          </div>
-          <div class="col-md-5">
+        </div>
+        <div class="mdl-cell mdl-cell--5-col">
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
         </div>
-    
-        <hr class="featurette-divider">
-    
-        <!-- /END THE FEATURETTES -->
-    
-    </div><!-- /.container -->
+    </div>
 
-        <!-- Why Choose Us Section -->
-        <div id="why-choose-us" class="section bg-light">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="card why-choose-us-item col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">High-Quality Beans - The Foundation of a Great Cup</h4>
-                                    <p class="card-text">We believe exceptional...</p>
-                                    <button onclick="openModalReadMore('high-quality')">Read more</button>
-                                </div>
-                            </div>
-                            <div class="card why-choose-us-item col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">Your Home Away From Home - A Cozy Ambiance for Every Occasion</h4>
-                                    <p class="card-text">Our cafe is more than just a...</p>
-                                    <button onclick="openModalReadMore('home-away')">Read more</button>
-                                </div>
-                            </div>
-                            <div class="card why-choose-us-item col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">Friendly Staff - Service with a Smile</h4>
-                                    <p class="card-text">We understand that exceptional...</p>
-                                    <button onclick="openModalReadMore('friendly-staff')">Read more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="mdl-grid">
+        <h2 class="mdl-cell mdl-cell--12-col section-title">Testimonials</h2>
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__supporting-text">
+                    <p>"The best coffee shop in town! The atmosphere is cozy and the coffee is simply the best."</p>
+                    <footer class="blockquote-footer">John Doe</footer>
                 </div>
             </div>
         </div>
-    
-        <div class="container mt-5">
-            <ul class="nav nav-tabs justify-content-around" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="tab-25-stars" data-toggle="tab" href="#content-25-stars" role="tab" aria-controls="content-25-stars" aria-selected="true">
-                  25 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="tab-100-stars" data-toggle="tab" href="#content-100-stars" role="tab" aria-controls="content-100-stars" aria-selected="false">
-                  100 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="tab-200-stars" data-toggle="tab" href="#content-200-stars" role="tab" aria-controls="content-200-stars" aria-selected="false">
-                  200 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="tab-300-stars" data-toggle="tab" href="#content-300-stars" role="tab" aria-controls="content-300-stars" aria-selected="false">
-                  300 <span aria-hidden="true" class="text-gold"><img src="../images/coffee_icon.png" class="coffe-icon"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="tab-400-stars" data-toggle="tab" href="#content-400-stars" role="tab" aria-controls="content-400-stars" aria-selected="false">
-                  400 <span aria-hidden="true" class="text-gold"> <img src="../images/coffee_icon.png" class="coffe-icon"></span>
-                </a>
-              </li>
-            </ul>
-        
-            <div class="tab-content mt-4 col-lg-12">
-              <div class="tab-pane fade show active" id="content-25-stars" role="tabpanel" aria-labelledby="tab-25-stars">
-                <img src="../images/bag-brazil.jpg" class="card-img-top" alt="25 Stars Reward">
-                <h3>Customize your drink</h3>
-                <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup.</p>
-              </div>
-              <div class="tab-pane fade" id="content-100-stars" role="tabpanel" aria-labelledby="tab-100-stars">
-                <img src="../images/bag-coffe-beans.jpg" class="card-img-top" alt="100 Stars Reward">
-                <h3>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h3>
-                <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more.</p>
-              </div>
-              <div class="tab-pane fade" id="content-200-stars" role="tabpanel" aria-labelledby="tab-200-stars">
-                <img src="../images/bag-coffe-dark.jpg" class="card-img-top" alt="200 Stars Reward">
-                <h3>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h3>
-                <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
-              </div>
-              <div class="tab-pane fade" id="content-300-stars" role="tabpanel" aria-labelledby="tab-300-stars">
-                <img src="../images/bag-colombia-medium.jpg" class="card-img-top" alt="300 Stars Reward">
-                <h3>Sandwich, protein box or at-home coffee</h3>
-                <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
-              </div>
-              <div class="tab-pane fade" id="content-400-stars" role="tabpanel" aria-labelledby="tab-400-stars">
-                <img src="../images/bag-ethiopia.jpg" class="card-img-top" alt="400 Stars Reward">
-                <h3>Select Starbucks® merchandise</h3>
-                <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
-              </div>
-            </div>
-          </div>
-          
-    
-        <!-- Products Section -->
-        <div id="products" class="section">
-            <h2 class="section-title">Our Products</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                            <img src="../images/brasil-dark.jpg" class="card-img-top" alt="Coffee 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Our Special Brew</h5>
-                                <p class="card-text">Discover the unique flavors of our special brew, made from the finest beans.</p>
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                            <img src="../images/colombia-dragon.jpg" class="card-img-top" alt="Coffee 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Cozy Ambiance</h5>
-                                <p class="card-text">Enjoy your coffee in a warm and inviting atmosphere.</p>
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                            <img src="../images/bolivia-honey.jpg" class="card-img-top" alt="Coffee 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Fresh Pastries</h5>
-                                <p class="card-text">Pair your coffee with our freshly baked pastries.</p>
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__supporting-text">
+                    <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
+                    <footer class="blockquote-footer">Jane Smith</footer>
                 </div>
             </div>
         </div>
-    
-        <!-- Testimonials Section -->
-        <div id="testimonials" class="section">
-            <h2 class="section-title">Testimonials</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>"The best coffee shop in town! The atmosphere is cozy and the coffee is simply the best."</p>
-                                <footer class="blockquote-footer">John Doe</footer>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
-                                <footer class="blockquote-footer">Jane Smith</footer>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
-                                <footer class="blockquote-footer">Mary Johnson</footer>
-                            </div>
-                        </div>
-                    </div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__supporting-text">
+                    <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
+                    <footer class="blockquote-footer">Mary Johnson</footer>
                 </div>
             </div>
         </div>
-    
-        <!-- Our Story Section -->
-        <div id="our-story" class="section bg-light">
-            <h2 class="section-title">Our Story</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Founded in 2024, Coffee Craft started as a small neighborhood coffee shop with a passion for quality coffee and a desire to create a cozy space for coffee lovers. Our commitment to sourcing the finest beans and creating unique blends has earned us a loyal customer base. Join us on our journey and become a part of the Coffee Craft family.</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <div id="our-story" class="mdl-grid mdl-grid--no-spacing bg-light">
+        <h2 class="mdl-cell mdl-cell--12-col section-title">Our Story</h2>
+        <div class="mdl-cell mdl-cell--12-col">
+            <p>Founded in 2024, Coffee Craft started as a small neighborhood coffee shop with a passion for quality coffee and a desire to create a cozy space for coffee lovers. Our commitment to sourcing the finest beans and creating unique blends has earned us a loyal customer base. Join us on our journey and become a part of the Coffee Craft family.</p>
         </div>
-    
-        <!-- Events Section -->
-        <div id="events" class="section">
-            <h2 class="section-title">Events</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4>Weekly Coffee Tasting</h4>
-                        <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>Live Music</h4>
-                        <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+
+    <!-- Events Section -->
+    <div id="events" class="mdl-grid">
+        <h2 class="mdl-cell mdl-cell--12-col section-title">Events</h2>
+        <div class="mdl-cell mdl-cell--6-col">
+            <h4>Weekly Coffee Tasting</h4>
+            <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
         </div>
+        <div class="mdl-cell mdl-cell--6-col">
+            <h4>Live Music</h4>
+            <p>Join us every Friday evening for a coffee tasting event where you can sample our latest brews and learn about the origins of our beans.</p>
+        </div>
+    </div>
+
     <!-- Modal -->
-    <div class="modal fade" id="readMoreModal" tabindex="-1" role="dialog" aria-labelledby="readMoreModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="readMoreModalLabel">Read More</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img src="" alt="" class="img-fluid mb-3" id="modalImage">
-              <p id="modalText"></p>
-            </div>
-          </div>
+    <dialog class="mdl-dialog">
+        <h4 class="mdl-dialog__title" id="readMoreModalLabel">Read More</h4>
+        <div class="mdl-dialog__content">
+            <img src="" alt="" class="img-fluid mb-3" id="modalImage">
+            <p id="modalText"></p>
         </div>
-      </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button close">Close</button>
+        </div>
+    </dialog>
 
     <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <p>&copy; 2024 Coffee Craft. All rights reserved.</p>
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">&copy; 2024 Coffee Craft. All rights reserved.</div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#product-promotions-slider').carousel({
-                interval: 3000
-            });
+        document.querySelector('.close').addEventListener('click', function() {
+            document.querySelector('dialog').close();
         });
 
-        function openModalReadMore(section) {            
+        function openModalReadMore(section) {
+            var dialog = document.querySelector('dialog');
+            var modalImage = document.getElementById('modalImage');
+            var modalText = document.getElementById('modalText');
+
             if (section == 'high-quality') {
-                document.getElementById('modalImage').src = "../images/coffee-craft.jpeg";
-                document.getElementById('modalText').textContent = "We believe exceptional coffee starts with exceptional beans. That's why we meticulously source our beans from the most renowned coffee-growing regions around the world. We partner with farmers who share our passion for quality and work with them to ensure sustainable practices. Our beans are carefully selected for their unique characteristics, flavor profiles, and freshness. Through meticulous roasting, we unlock the full potential of these beans, creating a coffee experience that is both rich and nuanced";
+                modalImage.src = "../images/coffee-craft.jpeg";
+                modalText.textContent = "We believe exceptional coffee starts with exceptional beans. That's why we meticulously source our beans from the most renowned coffee-growing regions around the world. We partner with farmers who share our passion for quality and work with them to ensure sustainable practices. Our beans are carefully selected for their unique characteristics, flavor profiles, and freshness. Through meticulous roasting, we unlock the full potential of these beans, creating a coffee experience that is both rich and nuanced";
             }
 
             if (section == 'home-away') {
-                document.getElementById('modalImage').src = "../images/coffe-background-1.jpeg";
-                document.getElementById('modalText').textContent = "Our cafe is more than just a place to get a cup of coffee; it's a haven designed to make you feel right at home. We've created a warm and inviting atmosphere that caters to your every need. Whether you're seeking a quiet corner to catch up on work, a comfortable space to relax with friends, or a vibrant atmosphere to socialize, our cafe offers the perfect ambiance. Sink into our plush couches, enveloped by the soft glow of our lamps and the aroma of freshly brewed coffee. Let the stress of the day melt away as you unwind in our cozy haven.";
+                modalImage.src = "../images/coffe-background-1.jpeg";
+                modalText.textContent = "Our cafe is more than just a place to get a cup of coffee; it's a haven designed to make you feel right at home. We've created a warm and inviting atmosphere that caters to your every need. Whether you're seeking a quiet corner to catch up on work, a comfortable space to relax with friends, or a vibrant atmosphere to socialize, our cafe offers the perfect ambiance. Sink into our plush couches, enveloped by the soft glow of our lamps and the aroma of freshly brewed coffee. Let the stress of the day melt away as you unwind in our cozy haven.";
             }
 
             if (section == 'friendly-staff') {
-                document.getElementById('modalImage').src = "../images/coffe-background-2.jpeg";
-                document.getElementById('modalText').textContent = "We understand that exceptional service is just as important as a great cup of coffee. That's why our team is comprised of friendly, passionate coffee enthusiasts who are dedicated to providing you with an unforgettable experience. Our staff is knowledgeable about our coffee offerings and brewing methods, and they are always happy to answer your questions and make recommendations. They are committed to creating a welcoming and friendly environment where you feel valued and appreciated.";
+                modalImage.src = "../images/coffe-background-2.jpeg";
+                modalText.textContent = "We understand that exceptional service is just as important as a great cup of coffee. That's why our team is comprised of friendly, passionate coffee enthusiasts who are dedicated to providing you with an unforgettable experience. Our staff is knowledgeable about our coffee offerings and brewing methods, and they are always happy to answer your questions and make recommendations. They are committed to creating a welcoming and friendly environment where you feel valued and appreciated.";
             }
-            
-            $('#readMoreModal').modal('show');
-        } 
+
+            dialog.showModal();
+        }
     </script>
+    <script src="/boostrap/scripts/users.js"></script>
 </body>
 </html>

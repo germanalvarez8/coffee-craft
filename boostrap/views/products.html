@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Craft</title>
-    <link rel="stylesheet" href="/boostrap/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/boostrap/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Coffee Craft</a>
+        <a class="navbar-brand" href="index.html">Coffee Craft</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,6 +31,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <div class="cart-icon">
+                        <a class="nav-link fas fa-shopping-cart" href="cart.html"></a>
+                      <span id="cart-count" class="cart-count badge badge-info"></span>
+                    </div>
                 </li>
                 <li id="optionLogin" class="nav-item">
                     <a id="login" class="nav-link" href="login.html">Log in</a>
@@ -102,6 +110,28 @@
 
             productList.innerHTML += htmlProduct;
         });
+    </script>
+    <!-- Agregar productos al carrito -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const exampleProducts = [
+                { name: "Product name", description: "Brief description", quantity: 1, price: 12 },
+                { name: "Second product", description: "Brief description", quantity: 1, price: 8 },
+                { name: "Third item", description: "Brief description", quantity: 1, price: 5 }
+            ];
+            localStorage.setItem('shopping_cart', JSON.stringify(exampleProducts));
+
+            loadCartProducts();
+        });
+
+        function loadCartProducts() {
+            const products = JSON.parse(localStorage.getItem('shopping_cart'));
+            const cartCount = document.getElementById('cart-count');
+            
+            if (products) {
+                cartCount.textContent = products.length;
+            }
+        }
     </script>
     <script src="/boostrap/scripts/users.js"></script>
 </body>

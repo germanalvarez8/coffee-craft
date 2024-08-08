@@ -57,7 +57,9 @@ function addToCart(element) {
         shopCart.push({
             id: element.dataset.id,
             name: element.dataset.name,
-            quantity: 1
+            description: 'description',
+            quantity: 1,
+            price: 100
         });
     }
 
