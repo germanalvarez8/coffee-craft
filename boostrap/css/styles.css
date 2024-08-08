@@ -124,3 +124,8 @@ body {
     padding: 3px 6px;
     font-size: 10px;
 }
+
+#cart_container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

@@ -4,100 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Craft</title>
-    <link rel="stylesheet" href="/boostrap/css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Coffee Craft</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="products.html">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="jumbotron-secondary text-center">
-        <h1 class="display-4">Our products</h1>
-        <p class="lead">Visit multiple cultures in the comfort of your home</p>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Coffee Craft</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="index.html">Home</a>
+                    <a class="mdl-navigation__link" href="products.html">Products</a>
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                    <div class="mdl-navigation__link">
+                        <a class="fas fa-shopping-cart" href="cart.html"></a>
+                        <span id="cart-count" class="mdl-badge" data-badge="0"></span>
+                    </div>
+                    <a id="login" class="mdl-navigation__link" href="login.html">Log in</a>
+                    <a id="logout" class="mdl-navigation__link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
+                </nav>
+            </div>
+        </header>
     </div>
 
-    <section class="container" style="background-color: #eeeeee;">
-        <div id="product_list" class="row row-cols-1 row-cols-md-2 row-cols-lg-3"></div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+            <div class="mdl-typography--text-center">
+                <h1 class="mdl-typography--display-4">Our products</h1>
+                <p class="mdl-typography--subhead">Visit multiple cultures in the comfort of your home</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="mdl-grid" style="background-color: #eeeeee;">
+        <div id="product_list" class="mdl-grid"></div>
     </section>
 
-    <footer class="footer text-center">
-        <div class="container">
-            <p>&copy; 2024 Coffee Craft. All rights reserved.</p>
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">&copy; 2024 Coffee Craft. All rights reserved.</div>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/boostrap/scripts/data.js"></script>
     <script type="text/javascript">
         const productList = document.getElementById('product_list');
 
         products.forEach(product => {
-            htmlProduct = `
-                <div class="col">
-                    <div class="card text-black m-3">
-                        <div id="carousel_${product.id}" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src='${product.images[0]}' class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src='${product.images[1]}' class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src='${product.images[2]}' class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_${product.id}" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carousel_${product.id}" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
+            const htmlProduct = `
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__media">
+                            <img src='${product.images}' alt="...">
+                        </div>
+                        <div class="mdl-card__actions">
+                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" data-id="${product.id}" data-name="${product.title}" onclick="addToCart(this)">
+                                <i class="material-icons">add_shopping_cart</i>
                             </button>
                         </div>
-                        <img src="${product.image}" class="card-img">
-                        <div class="position-absolute m-3">
-                            <button class="btn btn-success" data-id="${product.id}" data-name="${product.title}" onclick="addToCart(this)">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="position-absolute bottom-0 text-light w-100" style="background-color: rgba(0, 0, 0, 0.5)">
-                                <h5 class="card-title p-2">${product.title}</h5>
-                                <p class="card-text p-2">${product.description}</p>
+                        <div class="mdl-card__supporting-text">
+                            <h5>${product.title}</h5>
+                            <p>${product.description}</p>
                         </div>
                     </div>
-                </div>`
+                </div>`;
 
             productList.innerHTML += htmlProduct;
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const exampleProducts = [
+                { name: "Product name", description: "Brief description", quantity: 1, price: 12 },
+                { name: "Second product", description: "Brief description", quantity: 1, price: 8 },
+                { name: "Third item", description: "Brief description", quantity: 1, price: 5 }
+            ];
+            localStorage.setItem('shopping_cart', JSON.stringify(exampleProducts));
+
+            loadCartProducts();
+        });
+
+        function loadCartProducts() {
+            const products = JSON.parse(localStorage.getItem('shopping_cart'));
+            const cartCount = document.getElementById('cart-count');
+
+            if (products) {
+                cartCount.setAttribute('data-badge', products.length);
+            }
+        }
+    </script>
+    <script src="/boostrap/scripts/users.js"></script>
 </body>
 </html>
