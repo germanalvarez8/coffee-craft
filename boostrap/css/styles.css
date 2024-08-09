@@ -128,4 +128,12 @@ body {
 #cart_container {
     padding-top: 5%;
     padding-bottom: 5%;
+    border-radius: 5%;
+}
+
+#cart_container .list-group-item {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
 }
