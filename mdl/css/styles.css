@@ -170,3 +170,12 @@ body {
     align-items: center;
     height: 100%;
 }
+
+.mdl-button--raised.mdl-button--colored {
+    background-color: #6f4e37 !important;
+    color: #f8f1e4;
+}
+
+.mdl-button--raised.mdl-button--colored:hover {
+    background-color: #bca77d;
+}
