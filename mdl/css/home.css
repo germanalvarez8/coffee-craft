@@ -100,7 +100,7 @@ body {
 .imagen-circular {
     width: 350px;
     height: 350px;
-    background: url('../images/coffe-background-1.jpeg') no-repeat center center;
+    background: url('../../images/coffe-background-1.jpeg') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     overflow: hidden;

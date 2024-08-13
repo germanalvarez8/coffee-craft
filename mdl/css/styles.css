@@ -11,6 +11,7 @@ body {
 
 .mdl-navigation__link, .mdl-layout-title {
     color: #f8f1e4;
+    padding: 0px 7px!important;
 }
 
 .mdl-navigation__link:hover, .mdl-layout-title:hover {

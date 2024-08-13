@@ -12,21 +12,29 @@
 <body>
     <!-- Navbar -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
+        <header class="mdl-layout__header navbar-custom">
             <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Coffee Craft</span>
-                <!-- Add spacer, to align navigation to the right -->
+                <!-- Título -->
+                <span class="mdl-layout-title navbar-brand">Coffee Craft</span>
+                <!-- Añadir espacio entre el título y los elementos de la derecha -->
                 <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
+                <!-- Navegación -->
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.html">Home</a>
                     <a class="mdl-navigation__link" href="products.html">Products</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
                     <a class="mdl-navigation__link" href="contact.html">Contact</a>
-                    <a class="mdl-navigation__link" href="cart.html">Cart</a>
-                    <a id="login" class="mdl-navigation__link" href="login.html">Log in</a>
-                    <a id="logout" class="mdl-navigation__link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
+                    <div class="mdl-navigation__link cart-icon">
+                        <a class="material-icons" href="cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div id="optionLogin" class="mdl-navigation__link">
+                        <a id="login" class="mdl-navigation__link" href="login.html">Log in</a>
+                        <a id="logout" class="mdl-navigation__link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
+                    </div>
                 </nav>
             </div>
         </header>

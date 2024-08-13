@@ -3,43 +3,43 @@ let products = [
         id: 1,
         title: 'Bolivia Honey',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/boostrap/images/bolivia-honey.jpg'
+        images: '/images/bolivia-honey.jpg'
     },
     {
         id: 2,
         title: 'Colombia Geisha',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/boostrap/images/bolivia.jpg'
+        images: '/images/bolivia.jpg'
     },
     {
         id: 3,
         title: 'Colombia Dragon',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/boostrap/images/colombia-dragon.jpg'
+        images: '/images/colombia-dragon.jpg'
     },
     {
         id: 4,
         title: 'Colombia Natural',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/boostrap/images/colombia-natural.jpg'
+        images: '/images/colombia-natural.jpg'
     },
     {
         id: 5,
         title: 'Colombia',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/boostrap/images/colombia.jpg'
+        images: '/images/colombia.jpg'
     },
     {
         id: 6,
         title: 'Brasil Dark',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/boostrap/images/brasil-dark.jpg'
+        images: '/images/brasil-dark.jpg'
     },
     {
         id: 7,
         title: 'Brasil',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/boostrap/images/brasil.jpg'
+        images: '/images/brasil.jpg'
     }
 ]
 
