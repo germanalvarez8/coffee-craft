@@ -197,3 +197,45 @@ body {
 #billing_form .mdl-textfield__input {
     background-color: #fff;
 }
+
+.coffee-bean-container {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#coffee-bean {
+    position: relative;
+    width: 150px;
+    height: 200px;
+}
+
+#coffee-bean .hand {
+    transition: transform 0.5s ease;
+    transform-origin: top center;
+}
+
+#coffee-bean .eye {
+    transition: transform 0.2s ease;
+    transform-origin: center center;
+}
+
+.mouth {
+    fill: #000;
+}
+
+.hendidura {
+    fill: none;
+    stroke: #3B2D1F;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sombra-hendidura {
+    fill: none;
+    stroke: #2A1E12;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.7;
+}
