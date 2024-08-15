@@ -53,32 +53,10 @@
         <p class="lead fade-in delay-2">Experience the best coffee in town</p>
     </div>
 
+    <div class="marketing">
+        <div id="main_menu_products" class="row"></div>
+    </div>
     <div class="container marketing">
-        <div class="row">
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2>Heading</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2>Heading</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2>Heading</h2>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-        </div>
-    
-        <!-- START THE FEATURETTES -->
         <hr class="featurette-divider">
 
         <div class="row featurette">
@@ -178,25 +156,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
-                                <footer class="blockquote-footer">Jane Smith</footer>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
+                            <footer class="blockquote-footer">Jane Smith</footer>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
-                                <footer class="blockquote-footer">Mary Johnson</footer>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
+                            <footer class="blockquote-footer">Mary Johnson</footer>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     
         <!-- Our Story Section -->
         <div id="our-story" class="section bg-light">
@@ -256,10 +235,39 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/boostrap/scripts/data.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#product-promotions-slider').carousel({
                 interval: 3000
+            });
+
+            let elementosAleatorios = [];
+            let indicesSeleccionados = [];
+
+            while (elementosAleatorios.length < 3) {
+                let indiceAleatorio = Math.floor(Math.random() * products.length);
+
+                if (!indicesSeleccionados.includes(indiceAleatorio)) {
+                    elementosAleatorios.push(products[indiceAleatorio]);
+                    indicesSeleccionados.push(indiceAleatorio);
+                }
+            }
+
+            const productList = document.getElementById('main_menu_products');
+
+            elementosAleatorios.forEach(product => {
+                htmlProduct = `
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="${product.title}" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="${product.flag_image}" width="140" height="140" clip-path="circle(50%)" transform="scale(1.5)" x="-23" y="-23" />
+                    </svg>
+                    <h2>${product.title}</h2>
+                    <p>${product.description}</p>
+                    <p><a class="btn btn-secondary" href="/boostrap/views/products.html">View details &raquo;</a></p>
+                </div>`
+
+                productList.innerHTML += htmlProduct;
             });
         });
 

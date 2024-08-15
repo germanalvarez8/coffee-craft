@@ -3,43 +3,50 @@ let products = [
         id: 1,
         title: 'Bolivia Honey',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/images/bolivia-honey.jpg'
+        images: '/images/bolivia-honey.jpg',
+        flag_image: '../images/bolivia-flag_140x140.jpeg'
     },
     {
         id: 2,
         title: 'Colombia Geisha',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/images/bolivia.jpg'
+        images: '/images/bolivia.jpg',
+        flag_image: '../images/colombia-flag_140x140.jpeg'
     },
     {
         id: 3,
         title: 'Colombia Dragon',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/images/colombia-dragon.jpg'
+        images: '/images/colombia-dragon.jpg',
+        flag_image: '../images/colombia-flag_140x140.jpeg'
     },
     {
         id: 4,
         title: 'Colombia Natural',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/images/colombia-natural.jpg'
+        images: '/images/colombia-natural.jpg',
+        flag_image: '../images/colombia-flag_140x140.jpeg'
     },
     {
         id: 5,
         title: 'Colombia',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/images/colombia.jpg'
+        images: '/images/colombia.jpg',
+        flag_image: '../images/colombia-flag_140x140.jpeg'
     },
     {
         id: 6,
         title: 'Brasil Dark',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/images/brasil-dark.jpg'
+        images: '/images/brasil-dark.jpg',
+        flag_image: '../images/brasil-flag_140x140.jpeg'
     },
     {
         id: 7,
         title: 'Brasil',
         description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-        images: '/images/brasil.jpg'
+        images: '/images/brasil.jpg',
+        flag_image: '../images/brasil-flag_140x140.jpeg'
     }
 ]
 
