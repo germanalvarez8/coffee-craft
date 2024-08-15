@@ -1,0 +1,108 @@
+@media (min-width: 1200px) {
+    .jumbotron {
+        padding: 15rem 15rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand, .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .featurette-image-container {
+        width: 500px;
+        height: 500px;
+    }
+
+    .btn-custom {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .jumbotron {
+        padding: 2rem 1rem;
+        font-size: 1rem;
+    }
+
+    .navbar-brand, .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .coffee-bean-container {
+        margin-top: 2%;
+        margin-bottom: 10px;
+    }
+
+    .featurette-image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .btn-custom {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    #cart_container {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #loginForm, #registerForm {
+        padding: 1rem;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    .fixed-bottom {
+        position: relative;
+        bottom: 0;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .jumbotron {
+        padding: 1rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .navbar-brand, .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .coffee-bean-container {
+        margin-top: 1%;
+        margin-bottom: 5px;
+    }
+
+    .featurette-image-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .btn-custom {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    #cart_container {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+
+    #loginForm, #registerForm {
+        padding: 0.5rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 5px 0;
+    }
+}
