@@ -8,25 +8,27 @@ document.getElementById('toggleLoginRegister').addEventListener('click', functio
     if (registerForm.style.display === 'none') {
         registerForm.style.display = 'block';
         loginForm.style.display = 'none';
-        toggleText.innerHTML = 'Already have an account? <a href="#" id="toggleLoginRegister" class="btn btn-link">Log In</a>';
+        toggleText.innerHTML = 'Already have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--accent">Log In</a>';
     } else {
         registerForm.style.display = 'none';
         loginForm.style.display = 'block';
-        toggleText.innerHTML = 'Don\'t have an account? <a href="#" id="toggleLoginRegister" class="btn btn-link">Sign Up</a>';
+        toggleText.innerHTML = 'Don\'t have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--accent">Sign Up</a>';
     }
 
     document.getElementById('toggleLoginRegister').addEventListener('click', arguments.callee);
 });
 
+// Validate email
 function validEmail(email) {
     return email !== '' && email.includes('@');
 }
 
+// Validate password
 function validPassword(password) {
     return password !== '' && password.length > 4;
 }
 
-// Register
+// Register a new user
 function register() {
     const newEmail = document.getElementById('newEmail').value;
     const newPassword = document.getElementById('newPassword').value;
