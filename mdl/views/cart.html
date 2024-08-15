@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Craft</title>
-    <!-- MDL Styles -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/home.css" rel="stylesheet">
 </head>
@@ -25,10 +22,9 @@
                     <a class="mdl-navigation__link" href="products.html">Products</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
                     <a class="mdl-navigation__link" href="contact.html">Contact</a>
-                    <div class="mdl-navigation__link">
-                        <a class="fas fa-shopping-cart" href="cart.html"></a>
-                        <span id="cart-count" class="mdl-badge" data-badge="0"></span>
-                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                    <a class="mdl-navigation__link material-icons" href="cart.html">shopping_cart</a>
+                    <span id="cart-count" class="mdl-chip__contact mdl-color--teal mdl-color-text--white">0</span>
                     <a id="login" class="mdl-navigation__link" href="login.html">Log in</a>
                     <a id="logout" class="mdl-navigation__link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
                 </nav>
@@ -36,67 +32,115 @@
         </header>
     </div>
 
-    <div class="mdl-grid">
-        <div class="mdl-cell">
-            <h4>Billing address</h4>
-            <form class="mdl-grid mdl-grid--no-spacing">
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
-                    <input class="mdl-textfield__input" type="text" id="firstName">
-                    <label class="mdl-textfield__label" for="firstName">First name</label>
+    <div id="billing_form" class="mdl-grid">
+        <div class="mdl-cell mdl-cell--5-col">
+            <h4 class="mb-3">Billing address</h4>
+            <form class="needs-validation" novalidate>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <label for="firstName" class="mdl-textfield__label">First name</label>
+                        <input type="text" class="mdl-textfield__input" id="firstName" placeholder="" required>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <label for="lastName" class="mdl-textfield__label">Last name</label>
+                        <input type="text" class="mdl-textfield__input" id="lastName" placeholder="" required>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <label for="email" class="mdl-textfield__label">Email <span class="text-muted">(Optional)</span></label>
+                        <input type="email" class="mdl-textfield__input" id="email" placeholder="you@example.com">
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <label for="address" class="mdl-textfield__label">Address</label>
+                        <input type="text" class="mdl-textfield__input" id="address" placeholder="1234 Main St" required>
+                    </div>
+                    <div class="mdl-cell mdl-cell--5-col">
+                        <label for="country" class="mdl-textfield__label">Country</label>
+                        <input type="text" class="mdl-textfield__input" id="country" placeholder="United States" required>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <label for="state" class="mdl-textfield__label">State</label>
+                        <input type="text" class="mdl-textfield__input" id="state" placeholder="California" required>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col">
+                        <label for="zip" class="mdl-textfield__label">Zip</label>
+                        <input type="text" class="mdl-textfield__input" id="zip" placeholder="78245" required>
+                    </div>
                 </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
-                    <input class="mdl-textfield__input" type="text" id="lastName">
-                    <label class="mdl-textfield__label" for="lastName">Last name</label>
+    
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4 class="mb-3">Payment</h4>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="credit">
+                            <input type="radio" id="credit" class="mdl-radio__button" name="paymentMethod" value="credit" checked required>
+                            <span class="mdl-radio__label">Credit card</span>
+                        </label>
+    
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="debit">
+                            <input type="radio" id="debit" class="mdl-radio__button" name="paymentMethod" value="debit" required>
+                            <span class="mdl-radio__label">Debit card</span>
+                        </label>
+                    </div>
                 </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-                    <input class="mdl-textfield__input" type="email" id="email">
-                    <label class="mdl-textfield__label" for="email">Email (Optional)</label>
+    
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <label for="cc-name" class="mdl-textfield__label">Name on card</label>
+                        <input type="text" class="mdl-textfield__input" id="cc-name" placeholder="" required>
+                        <small class="text-muted">Full name as displayed on card</small>
+                    </div>
+    
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <label for="cc-number" class="mdl-textfield__label">Credit card number</label>
+                        <input type="text" class="mdl-textfield__input" id="cc-number" placeholder="" required>
+                    </div>
+    
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <label for="cc-expiration" class="mdl-textfield__label">Expiration</label>
+                        <input type="text" class="mdl-textfield__input" id="cc-expiration" placeholder="" required>
+                    </div>
+    
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <label for="cc-cvv" class="mdl-textfield__label">CVV</label>
+                        <input type="text" class="mdl-textfield__input" id="cc-cvv" placeholder="" required>
+                    </div>
                 </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-                    <input class="mdl-textfield__input" type="text" id="address">
-                    <label class="mdl-textfield__label" for="address">Address</label>
-                </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--5-col">
-                    <input class="mdl-textfield__input" type="text" id="country">
-                    <label class="mdl-textfield__label" for="country">Country</label>
-                </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-                    <input class="mdl-textfield__input" type="text" id="state">
-                    <label class="mdl-textfield__label" for="state">State</label>
-                </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--3-col">
-                    <input class="mdl-textfield__input" type="text" id="zip">
-                    <label class="mdl-textfield__label" for="zip">Zip</label>
-                </div>
+    
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored w-100" type="submit">Continue to checkout</button>
             </form>
         </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-            <h4 class="mdl-layout-title">Order Summary</h4>
-            <ul class="mdl-list">
-                <li class="mdl-list__item mdl-list__item--two-line">
-                    <span class="mdl-list__item-primary-content">
-                        <span>Colombia Geisha</span>
-                        <span class="mdl-list__item-sub-title">Great Colombian coffee</span>
+    
+        <div class="mdl-cell">
+            <ul class="mdl-list" id="cart-items"></ul>
+            <li class="mdl-list__item mdl-list__item--three-line bg-light d-none" id="promo-code-li">
+                <span class="mdl-list__item-primary-content">
+                    <span class="text-success">
+                        <h6 class="my-0">Promo code</h6>
+                        <small id="promo-code-text"></small>
                     </span>
-                    <span class="mdl-list__item-secondary-content">
-                        <span class="mdl-list__item-secondary-info">$12.00</span>
-                    </span>
-                </li>
-                <!-- More items here -->
-            </ul>
-
-            <div class="mdl-card__actions mdl-card--border">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    Continue to checkout
-                </button>
-            </div>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                    <span class="text-success" id="promo-code-discount"></span>
+                </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <span>Total</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                    <strong id="cart-total">$0</strong>
+                </span>
+            </li>
+            <form id="promo-code-form" class="mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input type="text" class="mdl-textfield__input" id="promo-code" placeholder="Insert promo code">
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Redeem</button>
+                </div>
+            </form>
+            
         </div>
     </div>
 
@@ -110,7 +154,6 @@
     <!-- MDL JS -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-    <script src="../js/custom.js"></script>
     <script>
         const promoCodes = {
             "LATE10": 10,
@@ -143,11 +186,11 @@
             promoElement.classList.remove('d-none');
         }
     
-        document.querySelector('form').addEventListener('submit', function(event) {
+        document.querySelector('#promo-code-form').addEventListener('submit', function(event) {
             event.preventDefault();
     
-            const input = document.querySelector('input[type="text"]');
-            const code = input.value.trim();
+            const input = document.getElementById('promo-code');
+            const code = input.value;
     
             if (validatePromoCode(code)) {
                 applyPromoCode(code);
@@ -208,20 +251,28 @@
                 products.forEach((product, index) => {
                     const item = document.createElement('li');
                     let totalProductPrice = product.price * product.quantity;
-                    item.className = 'list-group-item d-flex justify-content-between lh-sm';
+                    item.className = 'mdl-list__item mdl-list__item--three-line';
                     item.innerHTML = `
-                        <div>
-                            <h6 class="my-0">${product.title}</h6>
-                            <small class="text-muted">${product.description}</small>
-                        </div>
-                        <div class="product-quantity">
-                            <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${index}, -1)">−</button>
-                            <span>${product.quantity}</span>
-                            <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${index}, 1)">+</button>
-                        </div>
-                        <span class="text-muted">$${(totalProductPrice).toFixed(2)}</span>
-                        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
-                            <i class="fa-solid fa-trash"></i>
+                        <span class="mdl-list__item-primary-content">
+                            <span>${product.title}</span>
+                            <span class="mdl-list__item-text-body">
+                                ${product.description}
+                            </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                            <div class="product-quantity">
+                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="updateQuantity(${index}, -1)">
+                                    <i class="material-icons">remove</i>
+                                </button>
+                                <span>${product.quantity}</span>
+                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="updateQuantity(${index}, 1)">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                        </span>
+                        <span class="mdl-list__item-secondary-info">$${(totalProductPrice).toFixed(2)}</span>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent" onclick="removeItem(${index})">
+                            <i class="material-icons">delete</i>
                         </button>
                     `;
                     cartItems.appendChild(item);
@@ -255,13 +306,12 @@
             if (products[index]) {
                 products[index].quantity += change;
 
-                // Asegurarse de que la cantidad no sea menor a 1
                 if (products[index].quantity < 1) {
                     products[index].quantity = 1;
                 }
 
                 localStorage.setItem('shopping_cart', JSON.stringify(products));
-                loadProducts(); // Recargar productos y recalcular el total
+                loadProducts();
             }
         }
     </script>
