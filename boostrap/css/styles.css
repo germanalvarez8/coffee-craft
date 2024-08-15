@@ -180,3 +180,47 @@ body {
     stroke-linejoin: round;
     opacity: 0.7;
 }
+
+.featurette-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.overlay-text {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.featurette-image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+.featurette-image-container {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+
+.featurette-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
