@@ -307,13 +307,12 @@
             if (products[index]) {
                 products[index].quantity += change;
 
-                // Asegurarse de que la cantidad no sea menor a 1
                 if (products[index].quantity < 1) {
                     products[index].quantity = 1;
                 }
 
                 localStorage.setItem('shopping_cart_boostrap', JSON.stringify(products));
-                loadProducts(); // Recargar productos y recalcular el total
+                loadProducts();
             }
         }
     </script>
