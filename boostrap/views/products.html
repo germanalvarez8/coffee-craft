@@ -101,7 +101,7 @@
         function loadCartProducts() {
             const products = JSON.parse(localStorage.getItem('shopping_cart_boostrap')) || [];
             const cartCount = document.getElementById('cart-count');
-            
+
             if (products) {
                 cartCount.textContent = products.length;
             }
