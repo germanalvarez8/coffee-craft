@@ -244,41 +244,15 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-            let exampleProducts = [{
-                id: 2,
-                title: 'Colombia Geisha',
-                description: 'Great Colombian coffe',
-                quantity: 2,
-                price: 12,
-                images: '/images/bolivia.jpg'
-            },
-            {
-                id: 6,
-                title: 'Brasil Dark',
-                description: 'Great Brazilian coffe',
-                quantity: 1,
-                price: 8,
-                images: '/images/brasil-dark.jpg'
-            },
-            {
-                id: 1,
-                title: 'Bolivia Honey',
-                description: 'Great Bolivian coffe',
-                quantity: 3,
-                price: 5,
-                images: '/images/bolivia-honey.jpg'
-            }];
-            localStorage.setItem('shopping_cart', JSON.stringify(exampleProducts));
-    
             loadProducts();
         });
-    
+
         function loadProducts() {
-            const products = JSON.parse(localStorage.getItem('shopping_cart'));
+            const products = JSON.parse(localStorage.getItem('shopping_cart_boostrap')) || [];
             const cartItems = document.getElementById('cart-items');
             const cartCount = document.getElementById('cart-count');
             const cartTotal = document.getElementById('cart-total');
-            
+
             let total = 0;
             cartItems.innerHTML = '';
     
@@ -289,7 +263,7 @@
                     item.className = 'list-group-item d-flex justify-content-between lh-sm';
                     item.innerHTML = `
                         <div>
-                            <h6 class="my-0">${product.title}</h6>
+                            <h6 class="my-0">${product.name}</h6>
                             <small class="text-muted">${product.description}</small>
                         </div>
                         <div class="product-quantity">
@@ -321,14 +295,14 @@
         }
     
         function removeItem(index) {
-            let products = JSON.parse(localStorage.getItem('shopping_cart'));
+            let products = JSON.parse(localStorage.getItem('shopping_cart_boostrap'));
             products.splice(index, 1);
-            localStorage.setItem('shopping_cart', JSON.stringify(products));
+            localStorage.setItem('shopping_cart_boostrap', JSON.stringify(products));
             loadProducts();
         }
 
         function updateQuantity(index, change) {
-            let products = JSON.parse(localStorage.getItem('shopping_cart'));
+            let products = JSON.parse(localStorage.getItem('shopping_cart_boostrap'));
 
             if (products[index]) {
                 products[index].quantity += change;
@@ -338,7 +312,7 @@
                     products[index].quantity = 1;
                 }
 
-                localStorage.setItem('shopping_cart', JSON.stringify(products));
+                localStorage.setItem('shopping_cart_boostrap', JSON.stringify(products));
                 loadProducts(); // Recargar productos y recalcular el total
             }
         }

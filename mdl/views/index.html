@@ -5,40 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Craft</title>
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/home.css" rel="stylesheet">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .mdl-card {
+            width: 384px;
+            height: 384px;
+            margin: 20px;
+        }
+
+        .mdl-card__media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mdl-card__actions {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .mdl-card__supporting-text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .mdl-card__supporting-text h5,
+        .mdl-card__supporting-text p {
+            margin: 0;
+        }
+
+        .mdl-grid {
+            max-width: 1296px;
+            margin: 0 auto;
+        }
+
+    .mdl-button--green {
+        background: #198754;
+        color: white;
+    }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header navbar-custom">
+    <div class="mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
-                <!-- Título -->
-                <span class="mdl-layout-title navbar-brand">Coffee Craft</span>
-                <!-- Añadir espacio entre el título y los elementos de la derecha -->
+                <span class="mdl-layout-title">Coffee Craft</span>
                 <div class="mdl-layout-spacer"></div>
-                <!-- Navegación -->
+                <!-- Navigation -->
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.html">Home</a>
                     <a class="mdl-navigation__link" href="products.html">Products</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
                     <a class="mdl-navigation__link" href="contact.html">Contact</a>
-                    <div class="mdl-navigation__link cart-icon">
-                        <a class="material-icons" href="cart.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0"/>
-                            </svg>
-                        </a>
+                    <div class="mdl-navigation__link">
+                        <a class="fas fa-shopping-cart" href="cart.html"></a>
+                        <span id="cart-count" class="mdl-badge" data-badge="0"></span>
                     </div>
-                    <div id="optionLogin" class="mdl-navigation__link">
-                        <a id="login" class="mdl-navigation__link" href="login.html">Log in</a>
-                        <a id="logout" class="mdl-navigation__link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
-                    </div>
+                    <a id="login" class="mdl-navigation__link" href="login.html">Log in</a>
+                    <a id="logout" class="mdl-navigation__link" onclick="logout()" href="login.html" style="display: none;">Log out</a>
                 </nav>
             </div>
         </header>
     </div>
+
 
     <!-- Jumbotron -->
     <div class="mdl-grid mdl-grid--no-spacing">

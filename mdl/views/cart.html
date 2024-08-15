@@ -233,13 +233,13 @@
                 price: 5,
                 images: '/boostrap/images/bolivia-honey.jpg'
             }];
-            localStorage.setItem('shopping_cart', JSON.stringify(exampleProducts));
+            localStorage.setItem('shopping_cart_mdl', JSON.stringify(exampleProducts));
     
             loadProducts();
         });
     
         function loadProducts() {
-            const products = JSON.parse(localStorage.getItem('shopping_cart'));
+            const products = JSON.parse(localStorage.getItem('shopping_cart_mdl'));
             const cartItems = document.getElementById('cart-items');
             const cartCount = document.getElementById('cart-count');
             const cartTotal = document.getElementById('cart-total');
@@ -294,14 +294,14 @@
         }
     
         function removeItem(index) {
-            let products = JSON.parse(localStorage.getItem('shopping_cart'));
+            let products = JSON.parse(localStorage.getItem('shopping_cart_mdl'));
             products.splice(index, 1);
-            localStorage.setItem('shopping_cart', JSON.stringify(products));
+            localStorage.setItem('shopping_cart_mdl', JSON.stringify(products));
             loadProducts();
         }
 
         function updateQuantity(index, change) {
-            let products = JSON.parse(localStorage.getItem('shopping_cart'));
+            let products = JSON.parse(localStorage.getItem('shopping_cart_mdl'));
 
             if (products[index]) {
                 products[index].quantity += change;
@@ -310,7 +310,7 @@
                     products[index].quantity = 1;
                 }
 
-                localStorage.setItem('shopping_cart', JSON.stringify(products));
+                localStorage.setItem('shopping_cart_mdl', JSON.stringify(products));
                 loadProducts();
             }
         }

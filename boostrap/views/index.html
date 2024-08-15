@@ -249,13 +249,13 @@
                 { name: "Second product", description: "Brief description", quantity: 1, price: 8 },
                 { name: "Third item", description: "Brief description", quantity: 1, price: 5 }
             ];
-            localStorage.setItem('shopping_cart', JSON.stringify(exampleProducts));
+            localStorage.setItem('shopping_cart_boostrap', JSON.stringify(exampleProducts));
 
             loadCartProducts();
         });
 
         function loadCartProducts() {
-            const products = JSON.parse(localStorage.getItem('shopping_cart'));
+            const products = JSON.parse(localStorage.getItem('shopping_cart_boostrap'));
             const cartCount = document.getElementById('cart-count');
             
             if (products) {

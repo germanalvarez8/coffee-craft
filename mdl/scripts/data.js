@@ -44,11 +44,15 @@ let products = [
 ]
 
 function addToCart(element) {
-    let shopCart = JSON.parse(localStorage.getItem('shopping_cart')) || [];
-    let product = shopCart.find(item => item.id === element.dataset.id);
+    let shopCart = JSON.parse(localStorage.getItem('shopping_cart_mdl')) || [];
+    let productExist = shopCart.find(item => item.id === element.dataset.id);
 
-    if (product) {
-        product.quantity += 1;
+    if (productExist) {
+        shopCart.forEach(product => {
+            if (product.id == element.dataset.id) {
+                product.quantity += 1;
+            }
+        });
     } else {
         shopCart.push({
             id: element.dataset.id,
@@ -59,5 +63,5 @@ function addToCart(element) {
         });
     }
 
-    localStorage.setItem('shopping_cart', JSON.stringify(shopCart));
+    localStorage.setItem('shopping_cart_mdl', JSON.stringify(shopCart));
 }
