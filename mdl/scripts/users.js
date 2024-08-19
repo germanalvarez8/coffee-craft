@@ -97,8 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const eyes = document.querySelectorAll('.eye');
 const passwordInput = document.getElementById('password');
-const handLeft = document.getElementById('hand-left');
-const handRight = document.getElementById('hand-right');
 
 document.addEventListener('mousemove', (event) => {
     const x = (event.clientX / window.innerWidth - 0.5) * 30;
@@ -111,12 +109,18 @@ document.addEventListener('mousemove', (event) => {
 
 if (passwordInput) {
     passwordInput.addEventListener('focus', () => {
-        handLeft.style.transform = 'translateY(-30px) translateX(-20px) rotate(-45deg)';
-        handRight.style.transform = 'translateY(-30px) translateX(20px) rotate(45deg)';
+
+        eyes.forEach(eye => {
+            eye.setAttribute('rx', '9'); // Definimos el ancho de la elipse
+            eye.setAttribute('ry', '1'); // Definimos la altura mínima de la elipse
+        });
     });
 
     passwordInput.addEventListener('blur', () => {
-        handLeft.style.transform = 'translateY(0) translateX(0) rotate(0)';
-        handRight.style.transform = 'translateY(0) translateX(0) rotate(0)';
+        // Restaurar los ojos a círculos
+        eyes.forEach(eye => {
+            eye.setAttribute('rx', '9'); // Restaurar el ancho original del círculo
+            eye.setAttribute('ry', '9'); // Restaurar la altura original del círculo
+        });
     });
 }

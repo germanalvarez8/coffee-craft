@@ -100,6 +100,27 @@ body {
     animation-delay: 1s;
 }
 
+#coffee-bean {
+    position: relative;
+    width: 150px;
+    height: 200px;
+}
+
+#coffee-bean .hand {
+    transition: transform 0.5s ease;
+    transform-origin: top center;
+}
+
+#coffee-bean .eye {
+    transition: transform 0.2s ease;
+    transform-origin: center center;
+}
+
+.coffee-bean-container {
+    text-align: center;
+    margin-top: 6%;
+}
+
 
 .cart-icon {
     position: relative;
@@ -136,12 +157,6 @@ body {
     padding: 10px;
     margin-bottom: 5px;
     border: 1px solid #ddd;
-}
-
-.coffee-bean-container {
-    text-align: center;
-    margin-bottom: 7%;
-    margin-top: 5%;
 }
 
 .tittle-login {
@@ -242,4 +257,31 @@ body {
 .price {
     flex-basis: 20%;
     text-align: right;
+}
+
+@media (min-width: 900px) and (max-width: 1450px) and (min-height: 700px) and (max-height: 830px) {
+    .coffee-bean-container {
+        margin-top: 1%;
+    }
+    .login-form {
+        margin-top: -5%;
+    }
+}
+
+@media (min-height: 700px) and (max-height: 1000px) {
+    .coffee-bean-container {
+        margin-top: 2%;
+    }
+    .login-form {
+        margin-top: -5%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .coffee-bean-container {
+        margin-top: 2%;
+    }
+    .login-form {
+        max-width: 300px;
+    }
 }
