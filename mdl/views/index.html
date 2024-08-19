@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Craft</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link href="../css/styles.css" rel="stylesheet">
@@ -18,31 +18,9 @@
         }
 
         .mdl-card {
-            width: 384px;
-            height: 384px;
-            margin: 20px;
-        }
-
-        .mdl-card__media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .mdl-card__actions {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        .mdl-card__supporting-text {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            box-sizing: border-box;
+            width: 90%;
+            height: 2%;
+            margin: 2%;
         }
 
         .mdl-card__supporting-text h5,
@@ -55,10 +33,11 @@
             margin: 0 auto;
         }
 
-    .mdl-button--green {
-        background: #198754;
-        color: white;
-    }
+        body {
+            background-color: #ddb892;
+            color: #5c3d2e;
+            font-family: 'Playfair Display', serif !important;
+        }
     </style>
 </head>
 <body>
@@ -96,66 +75,128 @@
         </div>
     </div>
 
-    <div class="marketing mdl-grid">
-        <div id="main_menu_products"></div>
-    </div>
+    <!-- Promote products -->
     <div class="mdl-grid">
         <div class="product-promote mdl-cell mdl-cell--4-col">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-            <h2>Heading</h2>
+            <div class="promote-img-content">
+                <img src="../../images/colombia-flag_140x140.jpeg" class="promote-img">
+            </div>
+            <h2>Colombia</h2>
             <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
+            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="/mdl/views/products.html">View details &raquo;</a></p>
         </div>
         <div class="mdl-cell mdl-cell--4-col">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-            <h2>Heading</h2>
+            <div class="promote-img-content">
+                <img src="../../images/brasil-flag_140x140.jpeg" class="promote-img">
+            </div>
+            <h2>Brasil</h2>
             <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
+            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="/mdl/views/products.html">View details &raquo;</a></p>
         </div>
         <div class="mdl-cell mdl-cell--4-col">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-            <h2>Heading</h2>
+            <div class="promote-img-content">
+                <img src="../../images/bolivia-flag_140x140.jpeg" class="promote-img">
+            </div>
+            <h2>Bolivia</h2>
             <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
+            <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="/mdl/views/products.html">View details &raquo;</a></p>
         </div>
     </div>
 
     <!-- Featurettes -->
-    <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--7-col">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-        </div>
-        <div class="mdl-cell mdl-cell--5-col">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-        </div>
-    </div>
+    <hr class="featurette-divider">
 
     <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--7-col mdl-cell--order-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        <div class="mdl-cell mdl-cell--6-col">
+            <h2 class="mdl-typography--headline mdl-typography--font-light featurette-heading">
+                First featurette heading. <span class="mdl-typography--text-muted">It’ll blow your mind.</span>
+            </h2>
+            <p class="mdl-typography--body-1 lead">
+                Some great placeholder content for the first featurette here. Imagine some exciting prose here.
+            </p>
+        </div>
+        <div class="mdl-cell mdl-cell--5-col">
+            <div class="featurette-image-container">
+                <a href="about.html#our-passion-for-coffee">
+                    <div class="featurette-image-wrapper">
+                        <img 
+                            class="featurette-image" 
+                            src="../../images/coffe-background-2.jpeg"
+                            alt="Coffee Craft"
+                        />
+                        <div class="overlay">
+                            <div class="overlay-text">Our Passion for Coffee</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="featurette-divider">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--order-2">
+            <h2 class="mdl-typography--headline mdl-typography--font-light featurette-heading">
+                Oh yeah, it’s that good.  <span class="mdl-typography--text-muted">See for yourself.</span>
+            </h2>
+            <p class="mdl-typography--body-1 lead">
+                Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+            </p>
         </div>
         <div class="mdl-cell mdl-cell--5-col mdl-cell--order-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <div class="featurette-image-container">
+                <a href="about.html#our-passion-for-coffee">
+                    <div class="featurette-image-wrapper">
+                        <img 
+                            class="featurette-image" 
+                            src="../../images/close-up-coffee-cups-with-roasted-beans.jpg"
+                            alt="Coffee Craft"
+                        />
+                        <div class="overlay">
+                            <div class="overlay-text">Exquisite Quality</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
+    
+    <hr class="featurette-divider">
 
     <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--7-col">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+        <div class="mdl-cell mdl-cell--6-col">
+            <h2 class="mdl-typography--headline mdl-typography--font-light featurette-heading">
+                And lastly, this one. <span class="mdl-typography--text-muted">Checkmate.</span>
+            </h2>
+            <p class="mdl-typography--body-1 lead">
+                And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.
+            </p>
         </div>
         <div class="mdl-cell mdl-cell--5-col">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <div class="featurette-image-container">
+                <a href="about.html#our-passion-for-coffee">
+                    <div class="featurette-image-wrapper">
+                        <img 
+                            class="featurette-image" 
+                            src="../../images/high-angle-coffee-table.jpg"
+                            alt="Coffee Craft"
+                        />
+                        <div class="overlay">
+                            <div class="overlay-text">Community and Tradition</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
+    
+    <hr class="featurette-divider">
 
     <!-- Testimonials Section -->
     <div id="testimonials" class="mdl-grid">
         <h2 class="mdl-cell mdl-cell--12-col section-title">Testimonials</h2>
         <div class="mdl-cell mdl-cell--4-col">
-            <div class="mdl-card mdl-shadow--2dp">
+            <div>
                 <div class="mdl-card__supporting-text">
                     <p>"The best coffee shop in town! The atmosphere is cozy and the coffee is simply the best."</p>
                     <footer class="blockquote-footer">John Doe</footer>
@@ -163,7 +204,7 @@
             </div>
         </div>
         <div class="mdl-cell mdl-cell--4-col">
-            <div class="mdl-card mdl-shadow--2dp">
+            <div>
                 <div class="mdl-card__supporting-text">
                     <p>"I love their special brew, it's unique and delicious. Highly recommend Coffee Craft!"</p>
                     <footer class="blockquote-footer">Jane Smith</footer>
@@ -171,7 +212,7 @@
             </div>
         </div>
         <div class="mdl-cell mdl-cell--4-col">
-            <div class="mdl-card mdl-shadow--2dp">
+            <div>
                 <div class="mdl-card__supporting-text">
                     <p>"The pastries are fresh and the staff is super friendly. A great place to relax."</p>
                     <footer class="blockquote-footer">Mary Johnson</footer>
@@ -181,7 +222,7 @@
     </div>
 
     <!-- Our Story Section -->
-    <div id="our-story" class="mdl-grid mdl-grid--no-spacing bg-light">
+    <div id="our-story" class="mdl-grid bg-light" style="max-width: max-content;">
         <h2 class="mdl-cell mdl-cell--12-col section-title">Our Story</h2>
         <div class="mdl-cell mdl-cell--12-col">
             <p>Founded in 2024, Coffee Craft started as a small neighborhood coffee shop with a passion for quality coffee and a desire to create a cozy space for coffee lovers. Our commitment to sourcing the finest beans and creating unique blends has earned us a loyal customer base. Join us on our journey and become a part of the Coffee Craft family.</p>
@@ -221,56 +262,6 @@
     </footer>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="/mdl/scripts/data.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let elementosAleatorios = [];
-            let indicesSeleccionados = [];
-
-            while (elementosAleatorios.length < 3) {
-                let indiceAleatorio = Math.floor(Math.random() * products.length);
-
-                if (!indicesSeleccionados.includes(indiceAleatorio)) {
-                    elementosAleatorios.push(products[indiceAleatorio]);
-                    indicesSeleccionados.push(indiceAleatorio);
-                }
-            }
-
-            const productList = document.getElementById('main_menu_products');
-
-            console.log(productList);
-            elementosAleatorios.forEach(product => {
-                htmlProduct = `
-                <div class="mdl-cell mdl-cell--4-col">
-                    <div class="mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__media">
-                        <svg class="rounded-circle" width="140" height="140" role="img" aria-label="${product.title}" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <image href="${product.flag_image}" width="140" height="140" clip-path="circle(50%)" transform="scale(1.5)" x="-23" y="-23" />
-                        </svg>
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">${product.title}</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        ${product.description}
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/mdl/views/products.html">View details &raquo;</a>
-                    </div>
-                    </div>
-                </div>`;
-
-                htmlProduct = `<div class="product-promote mdl-cell mdl-cell--4-col">
-                    <svg class="rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                    <h2>Heading</h2>
-                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                    <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
-                </div>`;
-
-
-                productList.innerHTML += htmlProduct;
-            });
-        });
-    </script>
     <script src="/mdl/scripts/users.js"></script>
     <script src="/mdl/scripts/session.js"></script>
 </body>
