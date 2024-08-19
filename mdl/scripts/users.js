@@ -1,22 +1,24 @@
-document.getElementById('toggleLoginRegister').addEventListener('click', function(event) {
-    event.preventDefault();
+if (document.getElementById('toggleLoginRegister')) {
+    document.getElementById('toggleLoginRegister').addEventListener('click', function(event) {
+        event.preventDefault();
 
-    const loginForm = document.getElementById('loginForm');
-    const registerForm = document.getElementById('registerForm');
-    const toggleText = document.getElementById('toggleLoginRegisterText');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const toggleText = document.getElementById('toggleLoginRegisterText');
 
-    if (registerForm.style.display === 'none') {
-        registerForm.style.display = 'block';
-        loginForm.style.display = 'none';
-        toggleText.innerHTML = 'Already have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--accent">Log In</a>';
-    } else {
-        registerForm.style.display = 'none';
-        loginForm.style.display = 'block';
-        toggleText.innerHTML = 'Don\'t have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--accent">Sign Up</a>';
-    }
+        if (registerForm.style.display === 'none') {
+            registerForm.style.display = 'block';
+            loginForm.style.display = 'none';
+            toggleText.innerHTML = 'Already have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--primary">Log In</a>';
+        } else {
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'block';
+            toggleText.innerHTML = 'Don\'t have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--primary">Sign Up</a>';
+        }
 
-    document.getElementById('toggleLoginRegister').addEventListener('click', arguments.callee);
-});
+        document.getElementById('toggleLoginRegister').addEventListener('click', arguments.callee);
+    });
+}
 
 // Validate email
 function validEmail(email) {
@@ -107,12 +109,14 @@ document.addEventListener('mousemove', (event) => {
     });
 });
 
-passwordInput.addEventListener('focus', () => {
-    handLeft.style.transform = 'translateY(-30px) translateX(-20px) rotate(-45deg)';
-    handRight.style.transform = 'translateY(-30px) translateX(20px) rotate(45deg)';
-});
+if (passwordInput) {
+    passwordInput.addEventListener('focus', () => {
+        handLeft.style.transform = 'translateY(-30px) translateX(-20px) rotate(-45deg)';
+        handRight.style.transform = 'translateY(-30px) translateX(20px) rotate(45deg)';
+    });
 
-passwordInput.addEventListener('blur', () => {
-    handLeft.style.transform = 'translateY(0) translateX(0) rotate(0)';
-    handRight.style.transform = 'translateY(0) translateX(0) rotate(0)';
-});
+    passwordInput.addEventListener('blur', () => {
+        handLeft.style.transform = 'translateY(0) translateX(0) rotate(0)';
+        handRight.style.transform = 'translateY(0) translateX(0) rotate(0)';
+    });
+}

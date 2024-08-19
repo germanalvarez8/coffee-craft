@@ -106,11 +106,11 @@ body {
     animation-delay: 1s;
 }
 
-
 .footer {
     font-family: 'Playfair Display', serif;
     background-color: #6f4e37;
-    padding: 10px 0;
+    color: #f8f1e4;
+    padding: 20px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -120,7 +120,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
 }
 
 .center-content {
@@ -140,20 +143,30 @@ body {
 
 .container-button {
     margin-top: 2%;
-    justify-content: center;
-    display: flex;
-    margin-right: 38%;
+    width: 100%;
+    text-align: left;
 }
 
 .login-form {
     width: 100%;
-    max-width: 650px;
+    max-width: 800px;
     padding: 10px;
     border-radius: 8px;
 }
 
+.account-link {
+    font-size: 1rem;
+}
+
 .custom-white-input .mdl-textfield__input {
     background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mdl-textfield {
+    width: 100% !important; /* aca se tuvo que tomar el ancho completo forzado, porque la clase mdl-textfield, por defecto tira 300px */
+    box-sizing: border-box;
 }
 
 .input-container {
@@ -172,9 +185,16 @@ body {
     height: 100%;
 }
 
+.footer-text {
+    font-size: 100%;
+}
+
 .mdl-button--raised.mdl-button--colored {
     background-color: #6f4e37 !important;
     color: #f8f1e4;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: auto;
 }
 
 .mdl-button--raised.mdl-button--colored:hover {
@@ -200,7 +220,7 @@ body {
 
 .coffee-bean-container {
     text-align: center;
-    margin-top: 2%;
+    margin-top: 6%;
 }
 
 #coffee-bean {
@@ -265,4 +285,15 @@ body {
 
 .mdl-list__item {
     margin: 2%;
+}
+
+@media (max-width: 768px) {
+    .container-inputs, .custom-white-input .mdl-textfield__input {
+        max-width: 100%;
+    }
+
+    .mdl-button--raised.mdl-button--colored {
+        width: 100%;
+        text-align: center;
+    }
 }

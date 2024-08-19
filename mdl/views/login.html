@@ -51,67 +51,66 @@
             </svg>
         </div>
 
-        <main class="mdl-layout__content">
-            <div class="center-content">
-                <!-- Login Form -->
-                <div class="login-form" id="loginForm">
-                    <div class="text-center">
-                        <h2 class="tittle-login">Log In</h2>
-                    </div>
-                    <div class="container-inputs">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
-                            <input class="mdl-textfield__input" type="email" id="email">
-                            <label class="mdl-textfield__label" for="email">Email</label>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
-                            <input class="mdl-textfield__input" type="password" id="password">
-                            <label class="mdl-textfield__label" for="password">Password</label>
-                        </div>
-                    </div>
-                    <div class="container-button">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="login()">
-                            Send
-                        </button>
-                    </div>
-                </div>
-
-                <div class="login-form" id="registerForm" style="display:none;">
-                    <div class="text-center">
-                        <h2 class="tittle-login">Sign Up</h2>
-                    </div>
-                    <div class="container-inputs">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
-                            <input class="mdl-textfield__input" type="email" id="newEmail">
-                            <label class="mdl-textfield__label" for="newEmail">Email</label>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
-                            <input class="mdl-textfield__input" type="password" id="newPassword">
-                            <label class="mdl-textfield__label" for="newPassword">Password</label>
-                        </div>
-                    </div>
-                    <div class="container-button">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="register()">
-                            Register
-                        </button>
-                    </div>
-                </div>
-
+        <div class="center-content">
+            <!-- Login Form -->
+            <div class="login-form" id="loginForm">
                 <div class="text-center">
-                    <p id="toggleLoginRegisterText">Don't have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--accent">Sign Up</a></p>
+                    <h2 class="tittle-login">Log In</h2>
+                </div>
+                <div class="container-inputs">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
+                        <input class="mdl-textfield__input" type="email" id="email">
+                        <label class="mdl-textfield__label" for="email">Email</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
+                        <input class="mdl-textfield__input" type="password" id="password">
+                        <label class="mdl-textfield__label" for="password">Password</label>
+                    </div>
+                </div>
+                <div class="container-button">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="login()">
+                        Login
+                    </button>
                 </div>
             </div>
-        </main>
+
+            <div class="login-form" id="registerForm" style="display:none;">
+                <div class="text-center">
+                    <h2 class="tittle-login">Sign Up</h2>
+                </div>
+                <div class="container-inputs">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
+                        <input class="mdl-textfield__input" type="email" id="newEmail">
+                        <label class="mdl-textfield__label" for="newEmail">Email</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label custom-white-input">
+                        <input class="mdl-textfield__input" type="password" id="newPassword">
+                        <label class="mdl-textfield__label" for="newPassword">Password</label>
+                    </div>
+                </div>
+                <div class="container-button">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="register()">
+                        Register
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p id="toggleLoginRegisterText" class="account-link">Don't have an account? <a href="#" id="toggleLoginRegister" class="mdl-button mdl-js-button mdl-button--primary">Sign Up</a></p>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer text-center">
+    <footer class="footer">
         <div class="footer-container">
-            <p>&copy; 2024 Coffee Craft. All rights reserved.</p>
+            <p class="footer-text">&copy; 2024 Coffee Craft. All rights reserved.</p>
         </div>
     </footer>
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
     <script src="/mdl/scripts/users.js"></script>
+    <script src="/mdl/scripts/session.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </body>
 </html>

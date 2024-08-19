@@ -140,8 +140,12 @@ body {
 
 .coffee-bean-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 7%;
     margin-top: 5%;
+}
+
+.tittle-login {
+    margin-bottom: 5%;
 }
 
 #coffee-bean {
