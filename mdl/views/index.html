@@ -6,9 +6,10 @@
     <title>Coffee Craft</title>
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/home.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .card-container {
             display: flex;
@@ -84,18 +85,22 @@
         </header>
     </div>
 
-
-    <!-- Jumbotron -->
-    <div class="mdl-grid mdl-grid--no-spacing">
-        <div id="home" class="mdl-cell mdl-cell--12-col mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="imagen-circular fade-in mdl-cell mdl-cell--12-col"></div>
+    <div id="header-img-content" class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col mdl-grid mdl-grid--no-spacing">
+            <div class="img-content">
+                <img src="../../images/coffe-background-1.jpeg" class="img-circular">
+            </div>
+            
             <h1 class="display-4 fade-in delay-1 mdl-cell mdl-cell--12-col mdl-typography--text-center">Welcome to Coffee Craft</h1>
             <p class="lead fade-in delay-2 mdl-cell mdl-cell--12-col mdl-typography--text-center">Experience the best coffee in town</p>
         </div>
     </div>
 
+    <div class="marketing mdl-grid">
+        <div id="main_menu_products"></div>
+    </div>
     <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col">
+        <div class="product-promote mdl-cell mdl-cell--4-col">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
             <h2>Heading</h2>
             <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
@@ -214,35 +219,58 @@
             <div class="mdl-logo">&copy; 2024 Coffee Craft. All rights reserved.</div>
         </div>
     </footer>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="/mdl/scripts/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let elementosAleatorios = [];
+            let indicesSeleccionados = [];
 
-    <script type="text/javascript">
-        document.querySelector('.close').addEventListener('click', function() {
-            document.querySelector('dialog').close();
+            while (elementosAleatorios.length < 3) {
+                let indiceAleatorio = Math.floor(Math.random() * products.length);
+
+                if (!indicesSeleccionados.includes(indiceAleatorio)) {
+                    elementosAleatorios.push(products[indiceAleatorio]);
+                    indicesSeleccionados.push(indiceAleatorio);
+                }
+            }
+
+            const productList = document.getElementById('main_menu_products');
+
+            console.log(productList);
+            elementosAleatorios.forEach(product => {
+                htmlProduct = `
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__media">
+                        <svg class="rounded-circle" width="140" height="140" role="img" aria-label="${product.title}" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <image href="${product.flag_image}" width="140" height="140" clip-path="circle(50%)" transform="scale(1.5)" x="-23" y="-23" />
+                        </svg>
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">${product.title}</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        ${product.description}
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/mdl/views/products.html">View details &raquo;</a>
+                    </div>
+                    </div>
+                </div>`;
+
+                htmlProduct = `<div class="product-promote mdl-cell mdl-cell--4-col">
+                    <svg class="rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                    <h2>Heading</h2>
+                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                    <p><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">View details &raquo;</a></p>
+                </div>`;
+
+
+                productList.innerHTML += htmlProduct;
+            });
         });
-
-        function openModalReadMore(section) {
-            var dialog = document.querySelector('dialog');
-            var modalImage = document.getElementById('modalImage');
-            var modalText = document.getElementById('modalText');
-
-            if (section == 'high-quality') {
-                modalImage.src = "../images/coffee-craft.jpeg";
-                modalText.textContent = "We believe exceptional coffee starts with exceptional beans. That's why we meticulously source our beans from the most renowned coffee-growing regions around the world. We partner with farmers who share our passion for quality and work with them to ensure sustainable practices. Our beans are carefully selected for their unique characteristics, flavor profiles, and freshness. Through meticulous roasting, we unlock the full potential of these beans, creating a coffee experience that is both rich and nuanced";
-            }
-
-            if (section == 'home-away') {
-                modalImage.src = "../images/coffe-background-1.jpeg";
-                modalText.textContent = "Our cafe is more than just a place to get a cup of coffee; it's a haven designed to make you feel right at home. We've created a warm and inviting atmosphere that caters to your every need. Whether you're seeking a quiet corner to catch up on work, a comfortable space to relax with friends, or a vibrant atmosphere to socialize, our cafe offers the perfect ambiance. Sink into our plush couches, enveloped by the soft glow of our lamps and the aroma of freshly brewed coffee. Let the stress of the day melt away as you unwind in our cozy haven.";
-            }
-
-            if (section == 'friendly-staff') {
-                modalImage.src = "../images/coffe-background-2.jpeg";
-                modalText.textContent = "We understand that exceptional service is just as important as a great cup of coffee. That's why our team is comprised of friendly, passionate coffee enthusiasts who are dedicated to providing you with an unforgettable experience. Our staff is knowledgeable about our coffee offerings and brewing methods, and they are always happy to answer your questions and make recommendations. They are committed to creating a welcoming and friendly environment where you feel valued and appreciated.";
-            }
-
-            dialog.showModal();
-        }
     </script>
-    <script src="/boostrap/scripts/users.js"></script>
+    <script src="/mdl/scripts/users.js"></script>
 </body>
 </html>

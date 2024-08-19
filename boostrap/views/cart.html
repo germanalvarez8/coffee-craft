@@ -261,19 +261,18 @@
                 products.forEach((product, index) => {
                     const item = document.createElement('li');
                     let totalProductPrice = product.price * product.quantity;
-                    item.className = 'list-group-item d-flex justify-content-between lh-sm';
+                    item.className = 'list-group-item d-flex justify-content-between lh-sm align-items-center';
                     item.innerHTML = `
-                        <div>
+                        <div class="product-info flex-grow-1">
                             <h6 class="my-0">${product.name}</h6>
-                            <small class="text-muted">${product.description}</small>
                         </div>
-                        <div class="product-quantity">
+                        <div class="product-quantity d-flex align-items-center">
                             <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${index}, -1)">−</button>
-                            <span>${product.quantity}</span>
+                            <span class="mx-2">${product.quantity}</span>
                             <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(${index}, 1)">+</button>
                         </div>
-                        <span class="text-muted">$${(totalProductPrice).toFixed(2)}</span>
-                        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
+                        <span class="text-muted price">$${(totalProductPrice).toFixed(2)}</span>
+                        <button class="btn btn-danger btn-sm ms-2" onclick="removeItem(${index})">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     `;

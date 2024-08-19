@@ -224,3 +224,18 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+.product-info {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.product-quantity {
+    flex-basis: 20%;
+    justify-content: center;
+}
+
+.price {
+    flex-basis: 20%;
+    text-align: right;
+}

@@ -239,10 +239,6 @@
     <script src="/boostrap/scripts/data.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#product-promotions-slider').carousel({
-                interval: 3000
-            });
-
             let elementosAleatorios = [];
             let indicesSeleccionados = [];
 
@@ -271,25 +267,6 @@
                 productList.innerHTML += htmlProduct;
             });
         });
-
-        function openModalReadMore(section) {            
-            if (section == 'high-quality') {
-                document.getElementById('modalImage').src = "../images/coffee-craft.jpeg";
-                document.getElementById('modalText').textContent = "We believe exceptional coffee starts with exceptional beans. That's why we meticulously source our beans from the most renowned coffee-growing regions around the world. We partner with farmers who share our passion for quality and work with them to ensure sustainable practices. Our beans are carefully selected for their unique characteristics, flavor profiles, and freshness. Through meticulous roasting, we unlock the full potential of these beans, creating a coffee experience that is both rich and nuanced";
-            }
-
-            if (section == 'home-away') {
-                document.getElementById('modalImage').src = "../images/coffe-background-1.jpeg";
-                document.getElementById('modalText').textContent = "Our cafe is more than just a place to get a cup of coffee; it's a haven designed to make you feel right at home. We've created a warm and inviting atmosphere that caters to your every need. Whether you're seeking a quiet corner to catch up on work, a comfortable space to relax with friends, or a vibrant atmosphere to socialize, our cafe offers the perfect ambiance. Sink into our plush couches, enveloped by the soft glow of our lamps and the aroma of freshly brewed coffee. Let the stress of the day melt away as you unwind in our cozy haven.";
-            }
-
-            if (section == 'friendly-staff') {
-                document.getElementById('modalImage').src = "../images/coffe-background-2.jpeg";
-                document.getElementById('modalText').textContent = "We understand that exceptional service is just as important as a great cup of coffee. That's why our team is comprised of friendly, passionate coffee enthusiasts who are dedicated to providing you with an unforgettable experience. Our staff is knowledgeable about our coffee offerings and brewing methods, and they are always happy to answer your questions and make recommendations. They are committed to creating a welcoming and friendly environment where you feel valued and appreciated.";
-            }
-            
-            $('#readMoreModal').modal('show');
-        } 
     </script>
     <script src="/boostrap/scripts/users.js"></script>
 </body>

@@ -1,7 +1,7 @@
 body {
     background-color: #ddb892;
     color: #5c3d2e;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif !important;
 }
 
 .mdl-layout__header {
@@ -191,7 +191,7 @@ body {
 
 #cart-items li {
     background-color: #fff;
-    max-width: 60%;
+    max-width: 65%;
 }
 
 #billing_form .mdl-textfield__input {
@@ -242,4 +242,27 @@ body {
 
 .mdl-layout__content {
     padding-bottom: 20px; /* Aumenta este valor si es necesario */
+}
+
+.product-info {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.product-quantity {
+    flex-basis: 20%;
+    justify-content: center;
+}
+
+.price {
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.mdl-list__item, .mdl-list__item .mdl-list__item-primary-content {
+    padding: 1%;
+}
+
+.mdl-list__item {
+    margin: 2%;
 }
