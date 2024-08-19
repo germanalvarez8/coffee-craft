@@ -19,7 +19,7 @@ body {
 .jumbotron-secondary {
     background-color: #ddb892;
     color: #5c3d2e;
-    padding: 10rem 10rem;
+    padding: 2rem 2rem;
 }
 
 .footer {
@@ -56,7 +56,7 @@ body {
 }
 
 .input-container {
-    max-width: 850px;
+    max-width: 70%;
     margin: auto;
 }
 
