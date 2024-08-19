@@ -24,29 +24,26 @@
         </header>
 
         <div class="coffee-bean-container">
-            <svg id="coffee-bean" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
-                <!-- Coffee bean body -->
-                <ellipse cx="100" cy="150" rx="70" ry="120" fill="#6F4E37"/>
-                <!-- Coffee bean groove -->
-                <path class="hendidura" d="M75,100 C100,160 100,160 125,200" />
-                <path class="sombra-hendidura" d="M80,110 C100,150 100,150 120,190" />
-                <!-- Eyes -->
-                <circle class="eye" id="eye-left" cx="70" cy="110" r="10" fill="#000"/>
-                <circle class="eye" id="eye-right" cx="130" cy="110" r="10" fill="#000"/>
-                <!-- Hands -->
-                <g id="hand-left" class="hand">
-                    <ellipse cx="35" cy="170" rx="20" ry="40" fill="#6F4E37"/>
-                    <line x1="25" y1="160" x2="45" y2="160" stroke="#000" stroke-width="3"/>
-                    <line x1="25" y1="180" x2="45" y2="180" stroke="#000" stroke-width="3"/>
-                    <line x1="25" y1="200" x2="45" y2="200" stroke="#000" stroke-width="3"/>
+            <svg id="coffee-cup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+                <!-- Taza de café -->
+                <g>
+                    <!-- Cuerpo de la taza -->
+                    <rect x="50" y="100" width="100" height="100" fill="#6F4E37" rx="20" ry="20" />
+                    <!-- Parte superior (líquido de café) -->
+                    <ellipse cx="100" cy="109" rx="45" ry="15" fill="#3B2D1F" />
+                    <!-- Asas de la taza -->
+                    <path d="M150,120 Q170,150 150,180" fill="none" stroke="#6F4E37" stroke-width="10" />
+                    <!-- Vapor del café -->
+                    <path d="M80,70 C75,50 85,50 80,30" stroke="#A67B5B" stroke-width="3" fill="none" />
+                    <path d="M100,60 C95,40 105,40 100,20" stroke="#A67B5B" stroke-width="3" fill="none" />
+                    <path d="M120,70 C115,50 125,50 120,30" stroke="#A67B5B" stroke-width="3" fill="none" />
                 </g>
-                <g id="hand-right" class="hand">
-                    <ellipse cx="165" cy="170" rx="20" ry="40" fill="#6F4E37"/>
-                    <line x1="155" y1="160" x2="175" y2="160" stroke="#000" stroke-width="3"/>
-                    <line x1="155" y1="180" x2="175" y2="180" stroke="#000" stroke-width="3"/>
-                    <line x1="155" y1="200" x2="175" y2="200" stroke="#000" stroke-width="3"/>
-                </g>
-                <!-- Mouth -->
+
+                <!-- Ojos -->
+                <ellipse class="eye" id="eye-left" cx="70" cy="135" rx="9" ry="9" fill="#000"/>
+                <ellipse class="eye" id="eye-right" cx="130" cy="135" rx="9" ry="9" fill="#000"/>
+
+                <!-- Boca -->
                 <path class="mouth" d="M80,160 Q100,180 120,160" stroke="#000" stroke-width="3" fill="none"/>
             </svg>
         </div>

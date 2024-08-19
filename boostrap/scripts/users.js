@@ -92,8 +92,6 @@ function logout() {
 
 const eyes = document.querySelectorAll('.eye');
 const passwordInput = document.getElementById('password');
-const handLeft = document.getElementById('hand-left');
-const handRight = document.getElementById('hand-right');
 
 document.addEventListener('mousemove', (event) => {
     const x = (event.clientX / window.innerWidth - 0.5) * 30;
@@ -106,12 +104,16 @@ document.addEventListener('mousemove', (event) => {
 
 if (passwordInput) {
     passwordInput.addEventListener('focus', () => {
-        handLeft.style.transform = 'translateY(-30px) translateX(-20px) rotate(-45deg)';
-        handRight.style.transform = 'translateY(-30px) translateX(20px) rotate(45deg)';
+
+        eyes.forEach(eye => {
+            eye.setAttribute('ry', '2');
+        });
     });
 
     passwordInput.addEventListener('blur', () => {
-        handLeft.style.transform = 'translateY(0) translateX(0) rotate(0)';
-        handRight.style.transform = 'translateY(0) translateX(0) rotate(0)';
+
+        eyes.forEach(eye => {
+            eye.setAttribute('ry', '10');
+        });
     });
 }
